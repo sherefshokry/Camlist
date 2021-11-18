@@ -24,6 +24,7 @@
 		5BE73E1F27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E1E27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift */; };
 		5BE73E2427468FAA00EEA7B3 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */; };
 		5BE73E2627468FEE00EEA7B3 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */; };
+		5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5BE73E1E27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenuesLoaderTest.swift; sourceTree = "<group>"; };
 		5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +198,7 @@
 		5BE73E192746879A00EEA7B3 /* RemoteData */ = {
 			isa = PBXGroup;
 			children = (
-				5BE73E2027468C9800EEA7B3 /* RemoteVenuesLoader */,
-				5BE73E2127468CAC00EEA7B3 /* RemoteVenueImageLoader */,
+				5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */,
 			);
 			path = RemoteData;
 			sourceTree = "<group>";
@@ -230,20 +231,6 @@
 			children = (
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		5BE73E2027468C9800EEA7B3 /* RemoteVenuesLoader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RemoteVenuesLoader;
-			sourceTree = "<group>";
-		};
-		5BE73E2127468CAC00EEA7B3 /* RemoteVenueImageLoader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RemoteVenueImageLoader;
 			sourceTree = "<group>";
 		};
 		5BE73E2227468F8500EEA7B3 /* Infrastrucure */ = {
@@ -387,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */,
 				5BE73DDB2746763900EEA7B3 /* ViewController.swift in Sources */,
 				5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */,
 				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
