@@ -11,7 +11,7 @@ protocol FetchVenuesUseCase {
     func execute(userLocation: UserLocation, completion: @escaping (Result<[Venue],Error>) -> Void)
 }
 
-struct UserLocation {
+public struct UserLocation {
     let lat: Double
     let lng: Double
 }

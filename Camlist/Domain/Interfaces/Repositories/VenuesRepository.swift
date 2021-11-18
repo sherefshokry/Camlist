@@ -8,5 +8,5 @@
 import Foundation
 
 protocol VenuesRepository {
-    func fetchVenuesList(userLocation: UserLocation, limit: Int, completion: @escaping (Result<[Venue],Error>) -> Void)
+    func fetchVenuesList(userLocation: UserLocation, completion: @escaping (Result<[Venue],Error>) -> Void)
 }

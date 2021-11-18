@@ -25,6 +25,11 @@
 		5BE73E2427468FAA00EEA7B3 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */; };
 		5BE73E2627468FEE00EEA7B3 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */; };
 		5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */; };
+		5BE73E2A27469C7900EEA7B3 /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2927469C7900EEA7B3 /* APIEndPoints.swift */; };
+		5BE73E2C2746A39500EEA7B3 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2B2746A39500EEA7B3 /* EndPoint.swift */; };
+		5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */; };
+		5BE73E302746B59800EEA7B3 /* VenueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */; };
+		5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueLoader.swift; sourceTree = "<group>"; };
+		5BE73E2927469C7900EEA7B3 /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		5BE73E2B2746A39500EEA7B3 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigrution.swift; sourceTree = "<group>"; };
+		5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueItemsMapper.swift; sourceTree = "<group>"; };
+		5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +208,8 @@
 		5BE73E192746879A00EEA7B3 /* RemoteData */ = {
 			isa = PBXGroup;
 			children = (
-				5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */,
+				5BE73E352746D61A00EEA7B3 /* Network */,
+				5BE73E342746C53500EEA7B3 /* RemoteVenuesLoader */,
 			);
 			path = RemoteData;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 		5BE73E1D27468B6D00EEA7B3 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -236,10 +248,45 @@
 		5BE73E2227468F8500EEA7B3 /* Infrastrucure */ = {
 			isa = PBXGroup;
 			children = (
+				5BE73E312746B61000EEA7B3 /* Helpers */,
+				5BE73E2B2746A39500EEA7B3 /* EndPoint.swift */,
 				5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */,
 				5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */,
 			);
 			path = Infrastrucure;
+			sourceTree = "<group>";
+		};
+		5BE73E312746B61000EEA7B3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BE73E342746C53500EEA7B3 /* RemoteVenuesLoader */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */,
+			);
+			path = RemoteVenuesLoader;
+			sourceTree = "<group>";
+		};
+		5BE73E352746D61A00EEA7B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E2927469C7900EEA7B3 /* APIEndPoints.swift */,
+				5BE73E362746D62F00EEA7B3 /* DTO */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BE73E362746D62F00EEA7B3 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,11 +424,16 @@
 				5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */,
 				5BE73DDB2746763900EEA7B3 /* ViewController.swift in Sources */,
 				5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */,
+				5BE73E2A27469C7900EEA7B3 /* APIEndPoints.swift in Sources */,
 				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
 				5BE73E1127467E5600EEA7B3 /* FetchVenuesUseCase.swift in Sources */,
 				5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */,
+				5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				5BE73E2C2746A39500EEA7B3 /* EndPoint.swift in Sources */,
 				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
+				5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */,
 				5BE73E2627468FEE00EEA7B3 /* URLSessionHTTPClient.swift in Sources */,
+				5BE73E302746B59800EEA7B3 /* VenueItemsMapper.swift in Sources */,
 				5BE73E2427468FAA00EEA7B3 /* HTTPClient.swift in Sources */,
 				5BE73E182746853100EEA7B3 /* VenueImageRepository.swift in Sources */,
 				5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */,
@@ -560,8 +612,12 @@
 		5BE73DFE2746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://api.foursquare.com/v2/venues";
+				API_VERSION = 20190425;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = EVB1TC3EUSRS0U4SICJ0FD1S51YTKTH4LFQGZZPVN3STZC51;
+				CLIENT_SECRET = SFZZHZJCRDQ1K2QZZ4GBIQKI13QYPNBMVCAKKA4EFGCX4XMX;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RLD3B22VC;
@@ -590,8 +646,12 @@
 		5BE73DFF2746764100EEA7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://api.foursquare.com/v2/venues";
+				API_VERSION = 20190425;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = EVB1TC3EUSRS0U4SICJ0FD1S51YTKTH4LFQGZZPVN3STZC51;
+				CLIENT_SECRET = SFZZHZJCRDQ1K2QZZ4GBIQKI13QYPNBMVCAKKA4EFGCX4XMX;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RLD3B22VC;

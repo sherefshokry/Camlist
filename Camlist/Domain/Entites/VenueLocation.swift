@@ -10,8 +10,10 @@ import Foundation
 struct VenueLocation {
     let lat: Double
     let lng: Double
-    let city: String
-    let state: String
+    let distance: Int
+    let city: String?
+    let state: String?
     let country: String
     let formattedAddress: [String]
+    let address: String?
 }
