@@ -30,6 +30,7 @@
 		5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */; };
 		5BE73E302746B59800EEA7B3 /* VenueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */; };
 		5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */; };
+		5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E372746E1F600EEA7B3 /* VenueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigrution.swift; sourceTree = "<group>"; };
 		5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueItemsMapper.swift; sourceTree = "<group>"; };
 		5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		5BE73E372746E1F600EEA7B3 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,6 @@
 				5BE73E1B27468B0A00EEA7B3 /* Presention */,
 				5BE73E2227468F8500EEA7B3 /* Infrastrucure */,
 				5BE73DD62746763900EEA7B3 /* AppDelegate.swift */,
-				5BE73DDA2746763900EEA7B3 /* ViewController.swift */,
 				5BE73DDC2746763900EEA7B3 /* Main.storyboard */,
 				5BE73DDF2746764000EEA7B3 /* Assets.xcassets */,
 				5BE73DE12746764000EEA7B3 /* LaunchScreen.storyboard */,
@@ -224,6 +225,8 @@
 		5BE73E1B27468B0A00EEA7B3 /* Presention */ = {
 			isa = PBXGroup;
 			children = (
+				5BE73DDA2746763900EEA7B3 /* ViewController.swift */,
+				5BE73E372746E1F600EEA7B3 /* VenueCell.swift */,
 			);
 			path = Presention;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */,
 				5BE73DDB2746763900EEA7B3 /* ViewController.swift in Sources */,
 				5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */,
+				5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */,
 				5BE73E2A27469C7900EEA7B3 /* APIEndPoints.swift in Sources */,
 				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
 				5BE73E1127467E5600EEA7B3 /* FetchVenuesUseCase.swift in Sources */,

@@ -9,6 +9,11 @@ Dependencies in this project are provided via Cocoapods. Please install all depe
 pod install
 `
 
+## Flowchart
+
+![Venue Loading Feature](venues_flowchart.png)
+
+
 ## Model Specs
 
 ### Venues
