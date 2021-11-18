@@ -15,6 +15,13 @@
 		5BE73DEE2746764000EEA7B3 /* CamlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DED2746764000EEA7B3 /* CamlistTests.swift */; };
 		5BE73DF82746764100EEA7B3 /* CamlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DF72746764100EEA7B3 /* CamlistUITests.swift */; };
 		5BE73DFA2746764100EEA7B3 /* CamlistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DF92746764100EEA7B3 /* CamlistUITestsLaunchTests.swift */; };
+		5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E0A27467AE300EEA7B3 /* Venue.swift */; };
+		5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E0C27467AF200EEA7B3 /* VenueLocation.swift */; };
+		5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E0E27467C7900EEA7B3 /* VenueImage.swift */; };
+		5BE73E1127467E5600EEA7B3 /* FetchVenuesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E1027467E5600EEA7B3 /* FetchVenuesUseCase.swift */; };
+		5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E1227467EB500EEA7B3 /* FetchVenueImageUseCase.swift */; };
+		5BE73E162746851D00EEA7B3 /* VenuesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E152746851D00EEA7B3 /* VenuesRepository.swift */; };
+		5BE73E182746853100EEA7B3 /* VenueImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E172746853100EEA7B3 /* VenueImageRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		5BE73DF32746764100EEA7B3 /* CamlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE73DF72746764100EEA7B3 /* CamlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamlistUITests.swift; sourceTree = "<group>"; };
 		5BE73DF92746764100EEA7B3 /* CamlistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamlistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5BE73E0A27467AE300EEA7B3 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		5BE73E0C27467AF200EEA7B3 /* VenueLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueLocation.swift; sourceTree = "<group>"; };
+		5BE73E0E27467C7900EEA7B3 /* VenueImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImage.swift; sourceTree = "<group>"; };
+		5BE73E1027467E5600EEA7B3 /* FetchVenuesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVenuesUseCase.swift; sourceTree = "<group>"; };
+		5BE73E1227467EB500EEA7B3 /* FetchVenueImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVenueImageUseCase.swift; sourceTree = "<group>"; };
+		5BE73E152746851D00EEA7B3 /* VenuesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRepository.swift; sourceTree = "<group>"; };
+		5BE73E172746853100EEA7B3 /* VenueImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImageRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,8 @@
 		5BE73DD52746763900EEA7B3 /* Camlist */ = {
 			isa = PBXGroup;
 			children = (
+				5BE73E0627467A1300EEA7B3 /* Domain */,
+				5BE73E192746879A00EEA7B3 /* Data */,
 				5BE73DD62746763900EEA7B3 /* AppDelegate.swift */,
 				5BE73DDA2746763900EEA7B3 /* ViewController.swift */,
 				5BE73DDC2746763900EEA7B3 /* Main.storyboard */,
@@ -122,6 +138,59 @@
 				5BE73DF92746764100EEA7B3 /* CamlistUITestsLaunchTests.swift */,
 			);
 			path = CamlistUITests;
+			sourceTree = "<group>";
+		};
+		5BE73E0627467A1300EEA7B3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E0727467A3300EEA7B3 /* Entites */,
+				5BE73E0827467A3A00EEA7B3 /* UseCases */,
+				5BE73E0927467A4200EEA7B3 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5BE73E0727467A3300EEA7B3 /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E0A27467AE300EEA7B3 /* Venue.swift */,
+				5BE73E0C27467AF200EEA7B3 /* VenueLocation.swift */,
+				5BE73E0E27467C7900EEA7B3 /* VenueImage.swift */,
+			);
+			path = Entites;
+			sourceTree = "<group>";
+		};
+		5BE73E0827467A3A00EEA7B3 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E1027467E5600EEA7B3 /* FetchVenuesUseCase.swift */,
+				5BE73E1227467EB500EEA7B3 /* FetchVenueImageUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5BE73E0927467A4200EEA7B3 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E14274684DF00EEA7B3 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		5BE73E14274684DF00EEA7B3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5BE73E152746851D00EEA7B3 /* VenuesRepository.swift */,
+				5BE73E172746853100EEA7B3 /* VenueImageRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5BE73E192746879A00EEA7B3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +325,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE73DDB2746763900EEA7B3 /* ViewController.swift in Sources */,
+				5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */,
+				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
+				5BE73E1127467E5600EEA7B3 /* FetchVenuesUseCase.swift in Sources */,
+				5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */,
+				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
+				5BE73E182746853100EEA7B3 /* VenueImageRepository.swift in Sources */,
 				5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */,
+				5BE73E162746851D00EEA7B3 /* VenuesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,8 +517,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,8 +547,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
