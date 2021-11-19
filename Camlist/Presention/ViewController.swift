@@ -27,6 +27,7 @@ extension VenueListViewController: UITableViewDataSource,UITableViewDelegate {
    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueCell", for: indexPath) as! VenueCell
+         cell.fadeIn(image: UIImage(named: "address_icon")!)
         return cell
     }
 
@@ -35,7 +36,7 @@ extension VenueListViewController: UITableViewDataSource,UITableViewDelegate {
     }
 
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+         return UITableView.automaticDimension
     }
     
 }
