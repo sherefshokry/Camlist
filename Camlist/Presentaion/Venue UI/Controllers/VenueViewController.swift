@@ -8,8 +8,7 @@
 import UIKit
 
 final class VenueViewController: UIViewController , StoryboardInstantiable {
-
-  //  @IBOutlet weak var viewIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorDataView: UIStackView!
     
@@ -31,8 +30,6 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-     //   viewIndicator = venueUpdateController?.view
         venueUpdateController?.loadVenueData()
     }
     
@@ -41,7 +38,7 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
 extension VenueViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return venueItems[indexPath.row].view(tableView: tableView,indexPath: indexPath)
+        return venueItems[indexPath.row].view(tableView: tableView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +47,10 @@ extension VenueViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        venueItems[indexPath.row].releaseCell()
     }
     
 }

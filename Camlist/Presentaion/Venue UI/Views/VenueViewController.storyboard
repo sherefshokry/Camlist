@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdL-oP-3T1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1ZD-pE-2bh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="VenueCell" id="HEI-eD-RIU" customClass="VenueCell" customModule="Camlist" customModuleProvider="target">
@@ -91,6 +91,9 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="PRs-t0-wyJ">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zd8-iO-Uid"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -100,7 +103,9 @@
                             <constraint firstItem="1ZD-pE-2bh" firstAttribute="top" secondItem="zd8-iO-Uid" secondAttribute="top" id="Aqv-if-6cV"/>
                             <constraint firstItem="Jb4-Ol-dl8" firstAttribute="centerY" secondItem="gGS-Ne-bzh" secondAttribute="centerY" id="Psl-Pi-iLd"/>
                             <constraint firstItem="Jb4-Ol-dl8" firstAttribute="centerX" secondItem="gGS-Ne-bzh" secondAttribute="centerX" id="ewc-LO-Uqe"/>
+                            <constraint firstItem="PRs-t0-wyJ" firstAttribute="centerX" secondItem="gGS-Ne-bzh" secondAttribute="centerX" id="s60-cz-1rI"/>
                             <constraint firstItem="1ZD-pE-2bh" firstAttribute="leading" secondItem="zd8-iO-Uid" secondAttribute="leading" id="s6b-w3-1L6"/>
+                            <constraint firstItem="PRs-t0-wyJ" firstAttribute="centerY" secondItem="gGS-Ne-bzh" secondAttribute="centerY" id="zbp-Fb-9n7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Near By" id="gLw-0Z-n6c"/>
@@ -112,24 +117,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63P-9p-woX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="381.15942028985512" y="70.982142857142847"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DvP-FS-eCV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pdL-oP-3T1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dDP-gj-cmG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3pv-9u-lhp" kind="relationship" relationship="rootViewController" id="iAi-30-azv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eoH-Qr-ZLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-528.98550724637687" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>

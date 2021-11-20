@@ -31,14 +31,10 @@ final class VenueUIComposer{
         
         return {[weak controller] venueItems in
             controller?.venueItems = venueItems.map {
-                VenueCellController(model: $0,useCase: imageLoaderUseCase)
+                let viewModel = VenueCellViewModel(model: $0, useCase: imageLoaderUseCase)
+                return VenueCellController(viewModel: viewModel)
             }
-            
         }
-        
-        
     }
-    
-    
     
 }

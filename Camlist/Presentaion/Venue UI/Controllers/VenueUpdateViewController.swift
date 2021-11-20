@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class VenueUpdateViewController {
     
     private(set) lazy var view: UIActivityIndicatorView = binded(UIActivityIndicatorView())
@@ -26,6 +27,7 @@ class VenueUpdateViewController {
     
     
     func binded(_ view: UIActivityIndicatorView) -> UIActivityIndicatorView {
+
         viewModel.onVenueLoading = {[weak view] isLoading in
             DispatchQueue.main.async { [weak view] in
                 if (isLoading){
@@ -36,7 +38,7 @@ class VenueUpdateViewController {
                     view?.stopAnimating()
                 }
             }
-            
+
         }
         return view
     }
