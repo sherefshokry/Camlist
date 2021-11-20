@@ -17,9 +17,9 @@ public final class RemoteVenueImageLoader: VenueImageRepository{
     }
     
     
-    func fetchVenueImage(venueId: String, completion: @escaping (Result<[VenueImage], Error>) -> Void) {
+    func fetchVenueImage(venueId: String, completion: @escaping (Result<[VenueImage], Error>) -> Void) -> HTTPClientTask {
         let urlRequest = APIEndPoints.getVenueImageURLRequest(venueID: venueId)
-        client.get(from: urlRequest) {[weak self] result in
+        let task = client.get(from: urlRequest) {[weak self] result in
             guard self != nil else { return }
             switch result {
             case let .success((data,response)):
@@ -28,6 +28,8 @@ public final class RemoteVenueImageLoader: VenueImageRepository{
                 completion(.failure(NetworkError.connectivity))
             }
         }
+        
+        return task
     }
     
     

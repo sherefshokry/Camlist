@@ -10,6 +10,7 @@ import Foundation
 class VenueCellViewModel{
     typealias Observer<T> = (T) -> Void
     
+    private var task: HTTPClientTask?
     private var model: Venue
     private var useCase: FetchVenueImageUseCase
     
@@ -32,7 +33,7 @@ class VenueCellViewModel{
     
     
     func loadImageData(){
-        useCase.execute(venueId: model.id) {[weak self] result in
+       task = useCase.execute(venueId: model.id) {[weak self] result in
             self?.handle(result: result)
         }
     }
@@ -55,6 +56,10 @@ class VenueCellViewModel{
         
     }
     
+
+    func cancelImageDataLoad(){
+        task?.cancel()
+    }
     
     private func prepareImageUrl(with venue: VenueImage) -> URL {
         let imageURL = venue.prefix + "\(venue.width)" + venue.suffix

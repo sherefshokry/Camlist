@@ -75,6 +75,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="3pv-9u-lhp" id="DXu-zR-0nv"/>
                                     <outlet property="delegate" destination="3pv-9u-lhp" id="b5i-z0-r6R"/>
+                                    <outlet property="prefetchDataSource" destination="3pv-9u-lhp" id="Z4C-Gv-VJB"/>
                                 </connections>
                             </tableView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jb4-Ol-dl8">
@@ -111,6 +112,7 @@
                     <navigationItem key="navigationItem" title="Near By" id="gLw-0Z-n6c"/>
                     <connections>
                         <outlet property="errorDataView" destination="Jb4-Ol-dl8" id="tMI-ek-scg"/>
+                        <outlet property="errorTitleLabel" destination="a3S-KB-YIS" id="c2t-1A-Sfv"/>
                         <outlet property="tableView" destination="1ZD-pE-2bh" id="8Bg-NY-mcm"/>
                     </connections>
                 </viewController>

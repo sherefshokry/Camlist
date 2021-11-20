@@ -44,6 +44,15 @@ final class VenueCellController{
         return cell
     }
     
+    func cancelLoad(){
+        releaseCell()
+        viewModel.cancelImageDataLoad()
+    }
+    
+    
+    func preload(){
+        viewModel.loadImageData()
+    }
     
     
     func releaseCell(){

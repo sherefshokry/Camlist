@@ -18,7 +18,11 @@ final class VenueUIComposer{
         
         viewModel.onVenueLoadedWithError = { [weak venueController] error in
             venueController?.venueItems = []
-            venueController?.hasError = true
+            if case NetworkError.invalidData = error {
+                venueController?.displayErrorView(with: "No Data Found !!")
+            }else{
+                venueController?.displayErrorView(with: "Something Went Wrong !!")
+            }
         }
         
         viewModel.onVenueUpdated = adaptVenueToCellController(forwardingTo: venueController, imageLoaderUseCase: fetchVenueImageUseCase)

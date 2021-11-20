@@ -21,7 +21,7 @@ final class VenueViewModel{
     }
 
     func loadVenues(){
-        let userLocation = UserLocation(lat: 30.0511, lng: 31.2126)
+        let userLocation = UserLocation(lat: 33.0511, lng: 31.2126)
         self.onVenueLoading?(true)
         useCase.execute(userLocation: userLocation) { [weak self] result in
             guard let self = self else{ return }

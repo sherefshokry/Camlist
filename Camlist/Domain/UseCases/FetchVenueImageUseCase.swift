@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FetchVenueImageUseCase {
-    func execute(venueId: String, completion: @escaping (Result<[VenueImage],Error>) -> Void)
+    func execute(venueId: String, completion: @escaping (Result<[VenueImage],Error>) -> Void) -> HTTPClientTask
 }
 
 final class DefaultFetchVenueImageUseCase: FetchVenueImageUseCase{
@@ -20,10 +20,11 @@ final class DefaultFetchVenueImageUseCase: FetchVenueImageUseCase{
     }
     
     
-    func execute(venueId: String, completion: @escaping (Result<[VenueImage], Error>) -> Void) {
-        venueImageRepository.fetchVenueImage(venueId: venueId) { result in
+    func execute(venueId: String, completion: @escaping (Result<[VenueImage], Error>) -> Void) -> HTTPClientTask {
+       let task = venueImageRepository.fetchVenueImage(venueId: venueId) { result in
             completion(result)
         }
+        return task
     }
     
 }
