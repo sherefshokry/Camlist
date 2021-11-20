@@ -28,11 +28,15 @@ class VenueCell: UITableViewCell{
     }
 
     func fadeIn(image: UIImage){
-        self.venueImage.image = image
-        
-        UIView.animate(withDuration: 0.3, delay: 0.3, options: []) {
-            self.venueImage.alpha = 1
+        DispatchQueue.main.async {
+            self.venueImage.image = image
+            UIView.animate(withDuration: 0.3, delay: 0.3, options: []) {
+                self.venueImage.alpha = 1
+            }
         }
+       
+        
+       
 
     }
     

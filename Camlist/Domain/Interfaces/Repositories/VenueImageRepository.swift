@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol VenuesImageRepository {
-    func fetchVenueImage(venueId: Int,completion: @escaping (Result<VenueImage,Error>) -> Void)
+protocol VenueImageRepository {
+    func fetchVenueImage(venueId: String,completion: @escaping (Result<[VenueImage],Error>) -> Void)
 }

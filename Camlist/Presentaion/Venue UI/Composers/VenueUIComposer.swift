@@ -10,7 +10,7 @@ import Foundation
 final class VenueUIComposer{
     private init() {}
     
-    public static func venueComposedWith(fetchVenueUseCase: FetchVenueUseCase) -> VenueViewController {
+    public static func venueComposedWith(fetchVenueUseCase: FetchVenueUseCase, fetchVenueImageUseCase: FetchVenueImageUseCase) -> VenueViewController {
         let viewModel = VenueViewModel(useCase: fetchVenueUseCase)
         let venueUpdateViewController = VenueUpdateViewController(viewModel: viewModel)
         let venueController = VenueViewController.instantiateViewController()
@@ -21,13 +21,24 @@ final class VenueUIComposer{
             venueController?.hasError = true
         }
         
-        viewModel.onVenueUpdated = { [weak venueController] venue in
-            venueController?.venueItems = venue
-            venueController?.hasError = false
-        }
+        viewModel.onVenueUpdated = adaptVenueToCellController(forwardingTo: venueController, imageLoaderUseCase: fetchVenueImageUseCase)
         
         return venueController
     }
+    
+    
+    private static func adaptVenueToCellController(forwardingTo controller: VenueViewController,imageLoaderUseCase: FetchVenueImageUseCase) -> (([Venue]) -> Void) {
+        
+        return {[weak controller] venueItems in
+            controller?.venueItems = venueItems.map {
+                VenueCellController(model: $0,useCase: imageLoaderUseCase)
+            }
+            
+        }
+        
+        
+    }
+    
     
     
 }

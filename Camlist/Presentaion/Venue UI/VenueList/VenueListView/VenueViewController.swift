@@ -8,14 +8,13 @@
 import UIKit
 
 final class VenueViewController: UIViewController , StoryboardInstantiable {
-    
-    
+
   //  @IBOutlet weak var viewIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorDataView: UIStackView!
     
     var venueUpdateController: VenueUpdateViewController?
-    var venueItems: [Venue] = [] {
+    var venueItems: [VenueCellController] = [] {
         didSet{
             DispatchQueue.main.async{ [weak self] in
                 self?.tableView.reloadData()
@@ -29,10 +28,7 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
           }
     }
     }
-    
-   
-    
-    
+
     public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,8 +41,7 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
 extension VenueViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = venueItems[indexPath.row]
-        return VenueCellController(model: model).view(tableView: tableView,indexPath: indexPath)
+        return venueItems[indexPath.row].view(tableView: tableView,indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

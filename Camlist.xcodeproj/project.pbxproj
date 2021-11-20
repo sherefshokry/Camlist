@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */; };
+		5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */; };
+		5B73DB0C27491E09008B6DC0 /* VenueImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */; };
 		5B7E2661274807BB00D5EB0B /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E2660274807BB00D5EB0B /* VenueViewModel.swift */; };
 		5B7E266327480B9B00D5EB0B /* VenueUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E266227480B9B00D5EB0B /* VenueUIComposer.swift */; };
 		5B7E266527480C3700D5EB0B /* VenueUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E266427480C3700D5EB0B /* VenueUpdateViewController.swift */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
+		5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueImageLoader.swift; sourceTree = "<group>"; };
+		5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImageMapper.swift; sourceTree = "<group>"; };
 		5B7E2660274807BB00D5EB0B /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		5B7E266227480B9B00D5EB0B /* VenueUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueUIComposer.swift; sourceTree = "<group>"; };
 		5B7E266427480C3700D5EB0B /* VenueUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueUpdateViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B23EF8E27491A7E00EF3526 /* VenueListView */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */,
+				5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */,
+				5B7E266427480C3700D5EB0B /* VenueUpdateViewController.swift */,
+				5B7E26672748207100D5EB0B /* VenueCellController.swift */,
+			);
+			path = VenueListView;
+			sourceTree = "<group>";
+		};
+		5B23EF8F27491AAA00EF3526 /* VenueListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E2660274807BB00D5EB0B /* VenueViewModel.swift */,
+			);
+			path = VenueListViewModel;
+			sourceTree = "<group>";
+		};
+		5B23EF9027491B7900EF3526 /* RemoteVenueImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */,
+			);
+			path = RemoteVenueImageLoader;
+			sourceTree = "<group>";
+		};
 		5B7E265D2747FA9400D5EB0B /* Composers */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				5B7E265D2747FA9400D5EB0B /* Composers */,
-				5B7E2666274819F700D5EB0B /* VenueCell */,
 				5B7E265F274807A500D5EB0B /* VenueList */,
 			);
 			path = "Venue UI";
@@ -139,11 +169,9 @@
 		5B7E265F274807A500D5EB0B /* VenueList */ = {
 			isa = PBXGroup;
 			children = (
-				5B7E26672748207100D5EB0B /* VenueCellController.swift */,
-				5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */,
-				5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */,
-				5B7E266427480C3700D5EB0B /* VenueUpdateViewController.swift */,
-				5B7E2660274807BB00D5EB0B /* VenueViewModel.swift */,
+				5B23EF8E27491A7E00EF3526 /* VenueListView */,
+				5B7E2666274819F700D5EB0B /* VenueCell */,
+				5B23EF8F27491AAA00EF3526 /* VenueListViewModel */,
 			);
 			path = VenueList;
 			sourceTree = "<group>";
@@ -268,6 +296,7 @@
 			children = (
 				5BE73E352746D61A00EEA7B3 /* Network */,
 				5BE73E342746C53500EEA7B3 /* RemoteVenuesLoader */,
+				5B23EF9027491B7900EF3526 /* RemoteVenueImageLoader */,
 			);
 			path = RemoteData;
 			sourceTree = "<group>";
@@ -346,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */,
+				5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -490,12 +520,14 @@
 				5BE73E2A27469C7900EEA7B3 /* APIEndPoints.swift in Sources */,
 				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
 				5BE73E1127467E5600EEA7B3 /* FetchVenueUseCase.swift in Sources */,
+				5B73DB0C27491E09008B6DC0 /* VenueImageMapper.swift in Sources */,
 				5B7E26682748207100D5EB0B /* VenueCellController.swift in Sources */,
 				5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */,
 				5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */,
 				5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */,
 				5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				5BE73E2C2746A39500EEA7B3 /* EndPoint.swift in Sources */,
+				5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */,
 				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
 				5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */,
 				5B7E266527480C3700D5EB0B /* VenueUpdateViewController.swift in Sources */,

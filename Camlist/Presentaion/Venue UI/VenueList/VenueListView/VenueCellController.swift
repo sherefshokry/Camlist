@@ -11,11 +11,11 @@ import UIKit
 final class VenueCellController {
     
     private var model: Venue
-    //private var useCase: FetchVenueImageUseCase
-//    , useCase: FetchVenueImageUseCase
-    init(model: Venue) {
+    private var useCase: FetchVenueImageUseCase
+
+    init(model: Venue, useCase: FetchVenueImageUseCase) {
         self.model = model
-       // self.useCase = useCase
+        self.useCase = useCase
     }
      
     
@@ -23,10 +23,18 @@ final class VenueCellController {
         let venueCell = tableView.dequeueReusableCell(withIdentifier: "VenueCell", for: indexPath) as! VenueCell
         venueCell.titleLabel.text = model.name
         venueCell.addressLabel.text = model.location.address
-        venueCell.fadeIn(image: UIImage(named: "address_icon")!)
+        useCase.execute(venueId: model.id) {[weak self] result in
+            switch result{
+            case let .success(venueImages):
+                print("\(self?.model.id) , \(venueImages.count)")
+               // venueCell.fadeIn(image: <#T##UIImage#>)
+            case  .failure(_):
+                venueCell.fadeIn(image: UIImage(named: "address_icon")!)
+            }
+        }
+       
         return venueCell
     }
-    
-    
+
     
 }
