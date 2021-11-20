@@ -22,8 +22,9 @@ public final class RemoteVenueLoader: VenuesRepository{
     }
     
     func fetchVenuesList(userLocation: UserLocation, completion: @escaping (Result<[Venue], Error>) -> Void) {
-        let requestURL = APIEndPoints.getVenuesURLRequest(userLocation: userLocation)
-        client.get(from: requestURL) {[weak self] result in
+        let urlRequest = APIEndPoints.getVenuesURLRequest(userLocation: userLocation)
+        
+        client.get(from: urlRequest) {[weak self] result in
             guard self != nil else { return }
             switch result {
             case let .success((data,response)):

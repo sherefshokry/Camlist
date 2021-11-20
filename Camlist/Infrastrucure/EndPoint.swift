@@ -20,14 +20,14 @@ public final class Endpoint {
         components.host = baseURL.host
         components.path = baseURL.path + path
         components.queryItems = [
-            URLQueryItem(name: "client_id", value: AppConfigrution().clientID),
-            URLQueryItem(name: "client_secret", value: AppConfigrution().clientSecret),
-            URLQueryItem(name: "v", value: AppConfigrution().apiVersion),
+            URLQueryItem(name: "v", value: "20190425"),
           ]
         components.queryItems?.append(contentsOf: queryItems)
 
         var request = URLRequest(url: components.url!)
         request.httpMethod = method.rawValue
+        request.addValue(AppConfigrution().apiKey, forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         return request
         }
     }

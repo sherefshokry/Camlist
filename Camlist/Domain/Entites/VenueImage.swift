@@ -8,6 +8,7 @@
 import Foundation
 
 struct VenueImage{
+    let id: String
     let prefix: String
     let suffix: String
     let width:  Int
