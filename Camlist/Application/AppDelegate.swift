@@ -15,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-      
-
+    
         let client = URLSessionHTTPClient()
         let venueResponseStorage = CoreDataVenueResponseStorage()
         let remoteVenueLoader = RemoteVenueLoader(client: client, venueResponseStorage: venueResponseStorage)
@@ -34,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
       
-       navigationController.pushViewController(vc, animated: false)
+      navigationController.pushViewController(vc, animated: false)
         
         return true
     }
@@ -43,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         CoreDataStorage.shared.saveContext()
     }
+    
+  
     
 
 }

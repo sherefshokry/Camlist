@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Near By-->
+        <!--Venue View Controller-->
         <scene sceneID="hhk-eV-Pgu">
             <objects>
                 <viewController storyboardIdentifier="VenueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3pv-9u-lhp" customClass="VenueViewController" customModule="Camlist" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +109,6 @@
                             <constraint firstItem="PRs-t0-wyJ" firstAttribute="centerY" secondItem="gGS-Ne-bzh" secondAttribute="centerY" id="zbp-Fb-9n7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Near By" id="gLw-0Z-n6c"/>
                     <connections>
                         <outlet property="errorDataView" destination="Jb4-Ol-dl8" id="tMI-ek-scg"/>
                         <outlet property="errorTitleLabel" destination="a3S-KB-YIS" id="c2t-1A-Sfv"/>

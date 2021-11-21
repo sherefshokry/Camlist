@@ -43,7 +43,7 @@ class VenueUpdateViewController {
     
     func saveUserCurrentLocation(userLocation: UserLocation){
         if let value = try? JSONEncoder().encode(userLocation) {
-            UserDefaults.standard.set(value, forKey: "userLocation")
+            UserDefaults.standard.set(value, forKey: Constants.DefaultCaching.USER_LOCATION)
             UserDefaults.standard.synchronize()
         }
     }

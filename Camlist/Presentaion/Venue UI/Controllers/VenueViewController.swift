@@ -34,6 +34,12 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
     public override func viewDidLoad() {
         super.viewDidLoad()
         venueUpdateController?.loadVenueData()
+        self.navigationItem.title = "Near By"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Realtime", style: .plain , target: self, action: #selector(self.action(sender:)))
+    }
+    
+    @objc func action(sender: UIBarButtonItem){
+//        "Single Update"
     }
     
 }

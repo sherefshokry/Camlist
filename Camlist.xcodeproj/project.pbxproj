@@ -22,6 +22,9 @@
 		5B8AEC64274A6EED00A954AD /* LocalVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */; };
 		5B8AEC67274A718300A954AD /* VenueResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC66274A718300A954AD /* VenueResponseStorage.swift */; };
 		5B8AEC69274A758B00A954AD /* CoreDataVenueResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC68274A758B00A954AD /* CoreDataVenueResponseStorage.swift */; };
+		5B8AEC6F274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC6E274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift */; };
+		5B8AEC71274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC70274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift */; };
+		5B8AEC73274AE7AF00A954AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC72274AE7AE00A954AD /* Constants.swift */; };
 		5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DD62746763900EEA7B3 /* AppDelegate.swift */; };
 		5BE73DDB2746763900EEA7B3 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */; };
 		5BE73DE02746764000EEA7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE73DDF2746764000EEA7B3 /* Assets.xcassets */; };
@@ -85,6 +88,9 @@
 		5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVenueLoader.swift; sourceTree = "<group>"; };
 		5B8AEC66274A718300A954AD /* VenueResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueResponseStorage.swift; sourceTree = "<group>"; };
 		5B8AEC68274A758B00A954AD /* CoreDataVenueResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataVenueResponseStorage.swift; sourceTree = "<group>"; };
+		5B8AEC6E274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertWithCompletion.swift"; sourceTree = "<group>"; };
+		5B8AEC70274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlertMsg.swift"; sourceTree = "<group>"; };
+		5B8AEC72274AE7AE00A954AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5BE73DD32746763900EEA7B3 /* Camlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE73DD62746763900EEA7B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */,
+				5B8AEC6E274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift */,
+				5B8AEC70274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift */,
+				5B8AEC72274AE7AE00A954AD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -718,13 +727,16 @@
 				5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */,
 				5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */,
 				5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */,
+				5B8AEC71274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift in Sources */,
 				5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				5BE73E2C2746A39500EEA7B3 /* EndPoint.swift in Sources */,
 				5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */,
 				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
 				5B8AEC5E274A67F800A954AD /* CoreDataStorage.xcdatamodeld in Sources */,
+				5B8AEC6F274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift in Sources */,
 				5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */,
 				5B7E266527480C3700D5EB0B /* VenueUpdateViewController.swift in Sources */,
+				5B8AEC73274AE7AF00A954AD /* Constants.swift in Sources */,
 				5BE73E2627468FEE00EEA7B3 /* URLSessionHTTPClient.swift in Sources */,
 				5BE73E302746B59800EEA7B3 /* VenueItemsMapper.swift in Sources */,
 				5BE73E2427468FAA00EEA7B3 /* HTTPClient.swift in Sources */,

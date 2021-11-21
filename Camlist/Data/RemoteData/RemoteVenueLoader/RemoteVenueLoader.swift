@@ -41,7 +41,7 @@ struct RemoteVenueLoader: VenueRepository{
      
     
     func loadUserLocation() -> UserLocation? {
-        if let value = UserDefaults.standard.value(forKey: "userLocation") as? Data {
+        if let value = UserDefaults.standard.value(forKey: Constants.DefaultCaching.USER_LOCATION) as? Data {
             if let user = try? JSONDecoder().decode(UserLocation.self, from: value ) {
                 return user
             }
