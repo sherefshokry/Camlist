@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,8 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+      
+
         let client = URLSessionHTTPClient()
-        let venueRepo = RemoteVenueLoader(client: client)
+        let venueResponseStorage = CoreDataVenueResponseStorage()
+        let remoteVenueLoader = RemoteVenueLoader(client: client, venueResponseStorage: venueResponseStorage)
+        let localVenueLoader = LocalVenueLoader(venueResponseStorage: venueResponseStorage)
+        let venueRepo = VenueRepoWithFallBack(primary: remoteVenueLoader, fallback: localVenueLoader)
         let fetchVenueUseCase = DefaultFetchVenueUseCase(venueRepository: venueRepo)
         let venueImageRepo = RemoteVenueImageLoader(client: client)
         let fetchVenueImageUseCase = DefaultFetchVenueImageUseCase(venueRepository: venueImageRepo)
@@ -34,6 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        CoreDataStorage.shared.saveContext()
+    }
+    
 
 }
+
+
+
 

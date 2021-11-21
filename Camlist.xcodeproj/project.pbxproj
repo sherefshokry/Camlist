@@ -17,6 +17,11 @@
 		5B7E26682748207100D5EB0B /* VenueCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E26672748207100D5EB0B /* VenueCellController.swift */; };
 		5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */; };
 		5B7E266D2748362200D5EB0B /* VenueViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */; };
+		5B8AEC5E274A67F800A954AD /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC5C274A67F800A954AD /* CoreDataStorage.xcdatamodeld */; };
+		5B8AEC61274A684700A954AD /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC60274A684700A954AD /* CoreDataStorage.swift */; };
+		5B8AEC64274A6EED00A954AD /* LocalVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */; };
+		5B8AEC67274A718300A954AD /* VenueResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC66274A718300A954AD /* VenueResponseStorage.swift */; };
+		5B8AEC69274A758B00A954AD /* CoreDataVenueResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC68274A758B00A954AD /* CoreDataVenueResponseStorage.swift */; };
 		5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DD62746763900EEA7B3 /* AppDelegate.swift */; };
 		5BE73DDB2746763900EEA7B3 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */; };
 		5BE73DE02746764000EEA7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE73DDF2746764000EEA7B3 /* Assets.xcassets */; };
@@ -75,6 +80,11 @@
 		5B7E26672748207100D5EB0B /* VenueCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellController.swift; sourceTree = "<group>"; };
 		5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VenueViewController.storyboard; sourceTree = "<group>"; };
+		5B8AEC5D274A67F800A954AD /* VenueDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueDataModel.xcdatamodel; sourceTree = "<group>"; };
+		5B8AEC60274A684700A954AD /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVenueLoader.swift; sourceTree = "<group>"; };
+		5B8AEC66274A718300A954AD /* VenueResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueResponseStorage.swift; sourceTree = "<group>"; };
+		5B8AEC68274A758B00A954AD /* CoreDataVenueResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataVenueResponseStorage.swift; sourceTree = "<group>"; };
 		5BE73DD32746763900EEA7B3 /* Camlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE73DD62746763900EEA7B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +216,32 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		5B8AEC5F274A681700A954AD /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				5B8AEC60274A684700A954AD /* CoreDataStorage.swift */,
+				5B8AEC5C274A67F800A954AD /* CoreDataStorage.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		5B8AEC62274A6EC200A954AD /* LocalVenueLoader */ = {
+			isa = PBXGroup;
+			children = (
+				5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */,
+			);
+			path = LocalVenueLoader;
+			sourceTree = "<group>";
+		};
+		5B8AEC65274A716000A954AD /* VenueResponseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				5B8AEC66274A718300A954AD /* VenueResponseStorage.swift */,
+				5B8AEC68274A758B00A954AD /* CoreDataVenueResponseStorage.swift */,
+			);
+			path = VenueResponseStorage;
+			sourceTree = "<group>";
+		};
 		5BE73DCA2746763900EEA7B3 = {
 			isa = PBXGroup;
 			children = (
@@ -231,11 +267,10 @@
 		5BE73DD52746763900EEA7B3 /* Camlist */ = {
 			isa = PBXGroup;
 			children = (
-				5BFD7C92274992810042A36A /* LocationManager */,
 				5BE73E1D27468B6D00EEA7B3 /* Application */,
 				5BE73E0627467A1300EEA7B3 /* Domain */,
-				5BE73E1C27468B3300EEA7B3 /* Data */,
 				5BE73E1B27468B0A00EEA7B3 /* Presentaion */,
+				5BE73E1C27468B3300EEA7B3 /* Data */,
 				5BE73E2227468F8500EEA7B3 /* Infrastrucure */,
 				5BE73DDF2746764000EEA7B3 /* Assets.xcassets */,
 				5BE73DE12746764000EEA7B3 /* LaunchScreen.storyboard */,
@@ -311,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				5BE73E352746D61A00EEA7B3 /* Network */,
-				5BE73E342746C53500EEA7B3 /* RemoteVenuesLoader */,
+				5BE73E342746C53500EEA7B3 /* RemoteVenueLoader */,
 				5B23EF9027491B7900EF3526 /* RemoteVenueImageLoader */,
 			);
 			path = RemoteData;
@@ -320,6 +355,9 @@
 		5BE73E1A27468AEB00EEA7B3 /* CacheData */ = {
 			isa = PBXGroup;
 			children = (
+				5B8AEC62274A6EC200A954AD /* LocalVenueLoader */,
+				5B8AEC65274A716000A954AD /* VenueResponseStorage */,
+				5B8AEC5F274A681700A954AD /* CoreDataStorage */,
 			);
 			path = CacheData;
 			sourceTree = "<group>";
@@ -347,6 +385,7 @@
 			children = (
 				5BE73DD62746763900EEA7B3 /* AppDelegate.swift */,
 				5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */,
+				5BFD7C92274992810042A36A /* LocationManager */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -370,12 +409,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		5BE73E342746C53500EEA7B3 /* RemoteVenuesLoader */ = {
+		5BE73E342746C53500EEA7B3 /* RemoteVenueLoader */ = {
 			isa = PBXGroup;
 			children = (
 				5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */,
 			);
-			path = RemoteVenuesLoader;
+			path = RemoteVenueLoader;
 			sourceTree = "<group>";
 		};
 		5BE73E352746D61A00EEA7B3 /* Network */ = {
@@ -666,12 +705,15 @@
 				5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */,
 				5B7E2661274807BB00D5EB0B /* VenueViewModel.swift in Sources */,
 				5BE73DDB2746763900EEA7B3 /* VenueViewController.swift in Sources */,
+				5B8AEC69274A758B00A954AD /* CoreDataVenueResponseStorage.swift in Sources */,
 				5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */,
 				5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */,
 				5BE73E2A27469C7900EEA7B3 /* APIEndPoints.swift in Sources */,
+				5B8AEC61274A684700A954AD /* CoreDataStorage.swift in Sources */,
 				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
 				5BE73E1127467E5600EEA7B3 /* FetchVenueUseCase.swift in Sources */,
 				5B73DB0C27491E09008B6DC0 /* VenueImageMapper.swift in Sources */,
+				5B8AEC64274A6EED00A954AD /* LocalVenueLoader.swift in Sources */,
 				5B7E26682748207100D5EB0B /* VenueCellController.swift in Sources */,
 				5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */,
 				5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */,
@@ -680,6 +722,7 @@
 				5BE73E2C2746A39500EEA7B3 /* EndPoint.swift in Sources */,
 				5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */,
 				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
+				5B8AEC5E274A67F800A954AD /* CoreDataStorage.xcdatamodeld in Sources */,
 				5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */,
 				5B7E266527480C3700D5EB0B /* VenueUpdateViewController.swift in Sources */,
 				5BE73E2627468FEE00EEA7B3 /* URLSessionHTTPClient.swift in Sources */,
@@ -690,6 +733,7 @@
 				5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */,
 				5BE73E162746851D00EEA7B3 /* VenuesRepository.swift in Sources */,
 				5BFD7C942749929C0042A36A /* LocationManager.swift in Sources */,
+				5B8AEC67274A718300A954AD /* VenueResponseStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,7 +902,7 @@
 			baseConfigurationReference = 2C38F3C289A010D39F0FDE70 /* Pods-Camlist.debug.xcconfig */;
 			buildSettings = {
 				API_BASE_URL = "https://api.foursquare.com/v3/places";
-				API_KEY = "fsq3xewdiE4jlqBfEN4+pLKp6CvCQGcS9kgaAq9MpBQflPs=";
+				API_KEY = "fsq3i7zLlSfxIcEDGcdVZovKT9XZpi3wZGmDCSSD30p/lkA=";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -894,7 +938,7 @@
 			baseConfigurationReference = EFFF50E81738D296AC4E5CFC /* Pods-Camlist.release.xcconfig */;
 			buildSettings = {
 				API_BASE_URL = "https://api.foursquare.com/v3/places";
-				API_KEY = "fsq3xewdiE4jlqBfEN4+pLKp6CvCQGcS9kgaAq9MpBQflPs=";
+				API_KEY = "fsq3i7zLlSfxIcEDGcdVZovKT9XZpi3wZGmDCSSD30p/lkA=";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1068,6 +1112,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B8AEC5C274A67F800A954AD /* CoreDataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B8AEC5D274A67F800A954AD /* VenueDataModel.xcdatamodel */,
+			);
+			currentVersion = 5B8AEC5D274A67F800A954AD /* VenueDataModel.xcdatamodel */;
+			path = CoreDataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5BE73DCB2746763900EEA7B3 /* Project object */;
 }

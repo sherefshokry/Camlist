@@ -7,32 +7,24 @@
 
 import Foundation
 
-protocol VenuesRepository {
-    func fetchVenuesList(userLocation: UserLocation, completion: @escaping (Result<[Venue],Error>) -> Void)
+protocol VenueRepository {
+    func fetchVenuesList(completion: @escaping (Result<[Venue],Error>) -> Void)
 }
 
-final class DefaultVenueRepository: VenuesRepository {
-   
-    let client: HTTPClient
+struct VenueRepoWithFallBack: VenueRepository {
     
-    init(client: HTTPClient){
-        self.client = client
-    }
-    
-    func fetchVenuesList(userLocation: UserLocation, completion: @escaping (Result<[Venue], Error>) -> Void) {
-        let requestURL = APIEndPoints.getVenuesURLRequest(userLocation: userLocation)
-        client.get(from: requestURL) { result in
+    let primary :  VenueRepository
+    let fallback : VenueRepository
+
+    func fetchVenuesList(completion: @escaping (Result<[Venue], Error>) -> Void) {
+        primary.fetchVenuesList { result in
             switch result{
-            case let .success((data,urlResponse)):
-                completion(VenueItemsMapper.map(data, urlResponse))
-            case let .failure(error):
-                completion(.failure(error))
+            case let .success(venueList):
+                completion(.success(venueList))
+            case  .failure(_):
+                fallback.fetchVenuesList(completion: completion)
             }
         }
     }
-    
-    
-    
-    
-    
+
 }

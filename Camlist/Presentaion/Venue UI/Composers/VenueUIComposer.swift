@@ -16,9 +16,9 @@ final class VenueUIComposer{
         let venueController = VenueViewController.instantiateViewController()
         venueController.venueUpdateController = venueUpdateViewController
         
-        viewModel.onShowErrorMessage = { [weak venueController] alertMessage in
-          //  venueController?.
-        }
+//        viewModel.onShowErrorMessage = { [weak venueController] alertMessage in
+//          //  venueController?.
+//        }
         
         viewModel.onVenueLoadedWithError = { [weak venueController] error in
             venueController?.venueItems = []
@@ -46,3 +46,6 @@ final class VenueUIComposer{
     }
     
 }
+
+
+

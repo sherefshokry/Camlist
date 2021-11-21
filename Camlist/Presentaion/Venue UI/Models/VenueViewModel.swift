@@ -22,35 +22,18 @@ final class VenueViewModel{
     }
     
     func loadVenues(){
-        
-        LocationManager.shared.getLocation {[weak self] (location:CLLocation?, error:NSError?) in
-            
-            if let error = error {
-                self?.onShowErrorMessage?(error.localizedDescription)
-                return
+        onVenueLoading?(true)
+        useCase.execute() { [weak self] result in
+            guard let self = self else{ return }
+            switch result{
+            case let .success(venue):
+                self.onVenueUpdated?(venue)
+            case let .failure(error):
+                self.onVenueLoadedWithError?(error)
             }
-            
-            guard let location = location else {
-                self?.onShowErrorMessage?("Unable to fetch location")
-                 return
-            }
-            let userLocation = UserLocation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-            self?.onVenueLoading?(true)
-            self?.useCase.execute(userLocation: userLocation) { [weak self] result in
-                guard let self = self else{ return }
-                switch result{
-                case let .success(venue):
-                    self.onVenueUpdated?(venue)
-                case let .failure(error):
-                    self.onVenueLoadedWithError?(error)
-                }
-                self.onVenueLoading?(false)
-            }
-            
-            
-            
+            self.onVenueLoading?(false)
         }
-        
     }
     
 }
+

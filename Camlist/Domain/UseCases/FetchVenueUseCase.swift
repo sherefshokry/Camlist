@@ -8,21 +8,20 @@
 import Foundation
 
 protocol FetchVenueUseCase {
-    func execute(userLocation: UserLocation, completion: @escaping (Result<[Venue],Error>) -> Void)
+    func execute(completion: @escaping (Result<[Venue],Error>) -> Void)
 }
 
 
 final class DefaultFetchVenueUseCase: FetchVenueUseCase {
     
-    let venueRepository: VenuesRepository
+    let venueRepository: VenueRepository
     
-    init(venueRepository: VenuesRepository){
+    init(venueRepository: VenueRepository){
         self.venueRepository =  venueRepository
     }
     
-    func execute(userLocation: UserLocation, completion: @escaping (Result<[Venue], Error>) -> Void) {
-        
-        venueRepository.fetchVenuesList(userLocation: userLocation) { result in
+    func execute(completion: @escaping (Result<[Venue], Error>) -> Void) {
+        venueRepository.fetchVenuesList() { result in
             completion(result)
         }
 
@@ -33,7 +32,7 @@ final class DefaultFetchVenueUseCase: FetchVenueUseCase {
 
 
 
-public struct UserLocation {
+public struct UserLocation: Codable {
     let lat: Double
     let lng: Double
 }
