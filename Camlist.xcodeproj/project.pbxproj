@@ -40,6 +40,7 @@
 		5BE73E302746B59800EEA7B3 /* VenueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */; };
 		5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */; };
 		5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E372746E1F600EEA7B3 /* VenueCell.swift */; };
+		5BFD7C942749929C0042A36A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD7C932749929C0042A36A /* LocationManager.swift */; };
 		6FB02A7EB7FC9C0379978645 /* Pods_Camlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E860BA5B389A3DA60B6F950D /* Pods_Camlist.framework */; };
 		851B480EC6079E233C213260 /* Pods_Camlist_CamlistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF772CBF50D0CA54DDE6103 /* Pods_Camlist_CamlistUITests.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		5BE73E2F2746B59800EEA7B3 /* VenueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueItemsMapper.swift; sourceTree = "<group>"; };
 		5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		5BE73E372746E1F600EEA7B3 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		5BFD7C932749929C0042A36A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9350F3498068C55005495AE8 /* Pods-CamlistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.debug.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC0A51539511050F6D06EFFF /* Pods-Camlist-CamlistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC10AAA76319F4253DA79F42 /* Pods-Camlist-CamlistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.release.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		5BE73DD52746763900EEA7B3 /* Camlist */ = {
 			isa = PBXGroup;
 			children = (
+				5BFD7C92274992810042A36A /* LocationManager */,
 				5BE73E1D27468B6D00EEA7B3 /* Application */,
 				5BE73E0627467A1300EEA7B3 /* Domain */,
 				5BE73E1C27468B3300EEA7B3 /* Data */,
@@ -410,6 +413,14 @@
 				5B7E266427480C3700D5EB0B /* VenueUpdateViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BFD7C92274992810042A36A /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				5BFD7C932749929C0042A36A /* LocationManager.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,6 +689,7 @@
 				5B7E266327480B9B00D5EB0B /* VenueUIComposer.swift in Sources */,
 				5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */,
 				5BE73E162746851D00EEA7B3 /* VenuesRepository.swift in Sources */,
+				5BFD7C942749929C0042A36A /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +866,9 @@
 				DEVELOPMENT_TEAM = 5RLD3B22VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Camlist/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to access your location to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -887,6 +902,9 @@
 				DEVELOPMENT_TEAM = 5RLD3B22VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Camlist/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to access your location to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
