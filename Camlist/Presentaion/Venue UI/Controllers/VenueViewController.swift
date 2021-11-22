@@ -7,11 +7,19 @@
 
 import UIKit
 
+enum AppStatus: String {
+    case realTime = "Realtime"
+    case singleUpdate = "Single Update"
+}
+
+
 final class VenueViewController: UIViewController , StoryboardInstantiable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorDataView: UIStackView!
     @IBOutlet weak var errorTitleLabel: UILabel!
+    
+    var reloadVenueList: (() -> Void)?
     
     var venueUpdateController: VenueUpdateViewController?
     var venueItems: [VenueCellController] = [] {
@@ -22,6 +30,33 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
         }
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        venueUpdateController?.setLoadingView(with: self.view)
+        venueUpdateController?.loadVenueData()
+        setupNavigationItem()
+    }
+    
+    
+    func setupNavigationItem(){
+        self.navigationItem.title = Constants.Strings.NEAR_BY
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: Utils.getAppStatus() == .realTime ?  Constants.Strings.REAL_TIME : Constants.Strings.SINGLE_UPDATE, style: .plain , target: self, action: #selector(self.action(sender:)))
+   
+    }
+    
+    @objc func action(sender: UIBarButtonItem){
+        let currentStatus = Utils.getAppStatus()
+        let alertMsg = currentStatus == .realTime ?  Constants.Strings.SINGLE_UPDATE_MSG : Constants.Strings.REALTIME_MSG
+        
+        self.areYouSureMsg(Msg: alertMsg) {[weak self] yes in
+            if yes{
+                Utils.setAppStatus(isRealTime: currentStatus == .realTime ? false : true)
+                self?.navigationItem.rightBarButtonItem?.title =  currentStatus == .realTime ? Constants.Strings.SINGLE_UPDATE : Constants.Strings.REAL_TIME
+                self?.reloadVenueList?()
+            }
+        }
+    }
+   
     func displayErrorView(with errorTitle: String){
         DispatchQueue.main.async { [weak self] in
             self?.errorDataView.isHidden = false
@@ -29,19 +64,11 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
         }
     }
     
-    
-
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        venueUpdateController?.loadVenueData()
-        self.navigationItem.title = "Near By"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Realtime", style: .plain , target: self, action: #selector(self.action(sender:)))
+    func hideErrorView(){
+        DispatchQueue.main.async { [weak self] in
+            self?.errorDataView.isHidden = true
+        }
     }
-    
-    @objc func action(sender: UIBarButtonItem){
-//        "Single Update"
-    }
-    
 }
 
 extension VenueViewController: UITableViewDataSource,UITableViewDelegate,UITableViewDataSourcePrefetching {

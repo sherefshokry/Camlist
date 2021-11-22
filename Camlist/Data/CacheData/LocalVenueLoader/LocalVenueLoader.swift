@@ -24,7 +24,7 @@ struct LocalVenueLoader: VenueRepository {
             switch result{
             case let .success(venueList):
                 
-                if ((venueList?.isEmpty) != nil) {
+                if ((venueList!.isEmpty) ) {
                     completion(.failure(UnExpectedValuesRepresntation()))
                 }else{
                     completion(.success(venueList ?? [Venue]()))

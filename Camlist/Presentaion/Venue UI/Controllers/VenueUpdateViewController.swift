@@ -8,10 +8,11 @@
 import Foundation
 import UIKit
 import CoreLocation
+import KVNProgress
 
 class VenueUpdateViewController {
     
-    private(set) lazy var view: UIActivityIndicatorView = binded(UIActivityIndicatorView())
+    var view: UIView = UIView()
     private let viewModel: VenueViewModel
     
     
@@ -20,17 +21,22 @@ class VenueUpdateViewController {
     }
     
     var onVenueUpdated: (([Venue]) -> Void)?
+    var onShowErrorMessage: ((String) -> Void)?
+    
+    func setLoadingView(with view:UIView){
+       bind(view)
+    }
     
     func loadVenueData(){
         LocationManager.shared.getLocation {[weak self] (location:CLLocation?, error:NSError?) in
             
             if let error = error {
-                //   self?.onShowErrorMessage?(error.localizedDescription)
+                self?.onShowErrorMessage?(error.localizedDescription)
                 return
             }
-            
+
             guard let location = location else {
-                //   self?.onShowErrorMessage?("Unable to fetch location")
+                self?.onShowErrorMessage?(Constants.Strings.UNABLE_FETCH_LOCATION)
                 return
             }
             
@@ -49,21 +55,18 @@ class VenueUpdateViewController {
     }
     
     
-    func binded(_ view: UIActivityIndicatorView) -> UIActivityIndicatorView {
-        
-        viewModel.onVenueLoading = {[weak view] isLoading in
-            DispatchQueue.main.async { [weak view] in
+    func bind(_ loadedView: UIView) {
+        viewModel.onVenueLoading = { isLoading in
+            DispatchQueue.main.async {[weak loadedView] in
                 if (isLoading){
-                    view?.isHidden = false
-                    view?.startAnimating()
+                    KVNProgress.show(withStatus: Constants.Strings.WAIT, on: loadedView!)
                 }else{
-                    view?.isHidden = true
-                    view?.stopAnimating()
+                    KVNProgress.dismiss()
+                    self.setLoadingView(with: UIView())
                 }
             }
             
         }
-        return view
     }
     
     

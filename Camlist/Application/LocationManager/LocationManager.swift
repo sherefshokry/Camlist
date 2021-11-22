@@ -253,11 +253,22 @@ final class LocationManager: NSObject {
         
         //Based on Current App State Realtime or single update
         
-//        locationManager?.stopUpdatingLocation()
-          locationCompletionHandler?(location,error)
-//        locationManager?.delegate = nil
-//        locationManager = nil
+        switch Utils.getAppStatus() {
+        case .realTime:
+            locationCompletionHandler?(location,error)
+        case .singleUpdate:
+            locationManager?.stopUpdatingLocation()
+            locationCompletionHandler?(location,error)
+            locationManager?.delegate = nil
+            locationManager = nil
+        }
+        
+      
     }
+    
+    
+    
+    
     
     private func didCompleteGeocoding(location:CLLocation?,placemark: CLPlacemark?,error: NSError?) {
         locationManager?.stopUpdatingLocation()

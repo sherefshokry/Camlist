@@ -15,7 +15,6 @@ final class VenueViewModel{
     var onVenueUpdated: Observer<[Venue]>?
     var onVenueLoadedWithError: Observer<Error>?
     var onVenueLoading: Observer<Bool>?
-    var onShowErrorMessage: Observer<String>?
     
     init(useCase: FetchVenueUseCase){
         self.useCase = useCase

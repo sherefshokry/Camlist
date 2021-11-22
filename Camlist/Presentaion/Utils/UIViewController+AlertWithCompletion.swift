@@ -13,10 +13,10 @@ extension UIViewController{
         
         let alert = UIAlertController(title: Msg , message: "" , preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: Strings.shared.no , style: UIAlertAction.Style.cancel , handler: {(UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Cancel" , style: UIAlertAction.Style.cancel , handler: {(UIAlertAction) in
             funcToLoad(false)
         }))
-        alert.addAction(UIAlertAction(title: Strings.shared.yes , style: UIAlertAction.Style.default , handler: {(UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default , handler: {(UIAlertAction) in
             funcToLoad(true)
             
         }

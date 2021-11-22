@@ -17,36 +17,38 @@ internal final class VenueItemsMapper {
             return results.map{ $0.item }
         }
         
-//        enum CodingKeys: String, CodingKey {
-//               case results
-//               case venue
-//           }
+        enum CodingKeys: String, CodingKey {
+          case results
+        }
+        
     }
     
     private struct Item : Codable {
-        let fsq_id, name: String
+        let fsqID, name: String
         let location: ItemLocation
         
-        var item: Venue {
-            return Venue(id: fsq_id, name: name, location: location.item)
+        enum CodingKeys: String, CodingKey {
+          case fsqID = "fsq_id"
+          case name , location
         }
         
-//        enum CodingKeys: String, CodingKey {
-//               case fsqID = "fsq_id"
-//               case location,name,item
-//           }
+        var item: Venue {
+            return Venue(id: fsqID, name: name, location: location.item)
+        }
+        
     }
     
     private struct ItemLocation : Codable {
         let address: String?
+       
+        enum CodingKeys: String, CodingKey {
+          case address
+        }
+        
         
         var item: VenueLocation {
             return VenueLocation(address: address)
         }
-        
-//        enum CodingKeys: String, CodingKey {
-//               case address
-//        }
     }
     
     private static var OK_200 : Int { return  200 }

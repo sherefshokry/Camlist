@@ -14,7 +14,7 @@ extension UIViewController{
     func showMessage(_ message: String) -> Void {
       
        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Strings.shared.OK, style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
              switch action.style{
              case .default:
                 alert.dismiss(animated: true, completion: nil)
@@ -23,7 +23,9 @@ extension UIViewController{
 
              case .destructive:
                    alert.dismiss(animated: true, completion: nil)
-       }}))
+             @unknown default:
+                 alert.dismiss(animated: true, completion: nil)
+             }}))
        self.present(alert, animated: true, completion: nil)
     }
     

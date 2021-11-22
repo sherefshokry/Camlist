@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34F93962957DA2F291412766 /* Pods_CamlistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF4E79B50819CB3EC37D7B9 /* Pods_CamlistTests.framework */; };
+		3BABCFBD9B91B999F2F161E6 /* Pods_Camlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */; };
 		5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */; };
 		5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */; };
 		5B73DB0C27491E09008B6DC0 /* VenueImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */; };
@@ -25,6 +25,8 @@
 		5B8AEC6F274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC6E274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift */; };
 		5B8AEC71274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC70274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift */; };
 		5B8AEC73274AE7AF00A954AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC72274AE7AE00A954AD /* Constants.swift */; };
+		5B8AEC75274B0CC800A954AD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC74274B0CC800A954AD /* Utils.swift */; };
+		5B8AEC77274B145B00A954AD /* MainAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC76274B145B00A954AD /* MainAppController.swift */; };
 		5BE73DD72746763900EEA7B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DD62746763900EEA7B3 /* AppDelegate.swift */; };
 		5BE73DDB2746763900EEA7B3 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */; };
 		5BE73DE02746764000EEA7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE73DDF2746764000EEA7B3 /* Assets.xcassets */; };
@@ -49,8 +51,8 @@
 		5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */; };
 		5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E372746E1F600EEA7B3 /* VenueCell.swift */; };
 		5BFD7C942749929C0042A36A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD7C932749929C0042A36A /* LocationManager.swift */; };
-		6FB02A7EB7FC9C0379978645 /* Pods_Camlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E860BA5B389A3DA60B6F950D /* Pods_Camlist.framework */; };
-		851B480EC6079E233C213260 /* Pods_Camlist_CamlistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF772CBF50D0CA54DDE6103 /* Pods_Camlist_CamlistUITests.framework */; };
+		9D3F1911D5BB21C7E3E64EC2 /* Pods_Camlist_CamlistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0D2295EBADE3F9E45CAA97 /* Pods_Camlist_CamlistUITests.framework */; };
+		A7CE9B6970FE05F5B6FCC6B7 /* Pods_CamlistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AF772CBF50D0CA54DDE6103 /* Pods_Camlist_CamlistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist_CamlistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CF4E79B50819CB3EC37D7B9 /* Pods_CamlistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamlistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C38F3C289A010D39F0FDE70 /* Pods-Camlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.debug.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.debug.xcconfig"; sourceTree = "<group>"; };
+		1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.release.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.release.xcconfig"; sourceTree = "<group>"; };
+		495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.debug.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.debug.xcconfig"; sourceTree = "<group>"; };
 		5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
 		5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueImageLoader.swift; sourceTree = "<group>"; };
 		5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImageMapper.swift; sourceTree = "<group>"; };
@@ -91,6 +92,8 @@
 		5B8AEC6E274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertWithCompletion.swift"; sourceTree = "<group>"; };
 		5B8AEC70274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlertMsg.swift"; sourceTree = "<group>"; };
 		5B8AEC72274AE7AE00A954AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5B8AEC74274B0CC800A954AD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5B8AEC76274B145B00A954AD /* MainAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppController.swift; sourceTree = "<group>"; };
 		5BE73DD32746763900EEA7B3 /* Camlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE73DD62746763900EEA7B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
@@ -119,12 +122,13 @@
 		5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		5BE73E372746E1F600EEA7B3 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		5BFD7C932749929C0042A36A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		9350F3498068C55005495AE8 /* Pods-CamlistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.debug.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DC0A51539511050F6D06EFFF /* Pods-Camlist-CamlistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DC10AAA76319F4253DA79F42 /* Pods-Camlist-CamlistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.release.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E860BA5B389A3DA60B6F950D /* Pods_Camlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFFF50E81738D296AC4E5CFC /* Pods-Camlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.release.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.release.xcconfig"; sourceTree = "<group>"; };
-		F1B6BDA0A441297D3D7C8C15 /* Pods-CamlistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.release.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F0D2295EBADE3F9E45CAA97 /* Pods_Camlist_CamlistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist_CamlistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3B532D114C2E9163E4E3B0 /* Pods-Camlist-CamlistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamlistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB483AAD8808528CBF2CD7D /* Pods-CamlistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.release.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.release.xcconfig"; sourceTree = "<group>"; };
+		F8F3B8B3DA266B7456DD1681 /* Pods-Camlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.release.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.release.xcconfig"; sourceTree = "<group>"; };
+		F92798D10A33BF32AB37CA99 /* Pods-CamlistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.debug.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB02A7EB7FC9C0379978645 /* Pods_Camlist.framework in Frameworks */,
+				3BABCFBD9B91B999F2F161E6 /* Pods_Camlist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34F93962957DA2F291412766 /* Pods_CamlistTests.framework in Frameworks */,
+				A7CE9B6970FE05F5B6FCC6B7 /* Pods_CamlistTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,32 +152,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851B480EC6079E233C213260 /* Pods_Camlist_CamlistUITests.framework in Frameworks */,
+				9D3F1911D5BB21C7E3E64EC2 /* Pods_Camlist_CamlistUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		358F001785DD3D5496AC628E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E860BA5B389A3DA60B6F950D /* Pods_Camlist.framework */,
-				0AF772CBF50D0CA54DDE6103 /* Pods_Camlist_CamlistUITests.framework */,
-				1CF4E79B50819CB3EC37D7B9 /* Pods_CamlistTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4E8A048D4D55FDCDCDFEDDA9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2C38F3C289A010D39F0FDE70 /* Pods-Camlist.debug.xcconfig */,
-				EFFF50E81738D296AC4E5CFC /* Pods-Camlist.release.xcconfig */,
-				DC0A51539511050F6D06EFFF /* Pods-Camlist-CamlistUITests.debug.xcconfig */,
-				DC10AAA76319F4253DA79F42 /* Pods-Camlist-CamlistUITests.release.xcconfig */,
-				9350F3498068C55005495AE8 /* Pods-CamlistTests.debug.xcconfig */,
-				F1B6BDA0A441297D3D7C8C15 /* Pods-CamlistTests.release.xcconfig */,
+				495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */,
+				F8F3B8B3DA266B7456DD1681 /* Pods-Camlist.release.xcconfig */,
+				CB3B532D114C2E9163E4E3B0 /* Pods-Camlist-CamlistUITests.debug.xcconfig */,
+				1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */,
+				F92798D10A33BF32AB37CA99 /* Pods-CamlistTests.debug.xcconfig */,
+				DCB483AAD8808528CBF2CD7D /* Pods-CamlistTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -221,6 +215,7 @@
 				5B8AEC6E274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift */,
 				5B8AEC70274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift */,
 				5B8AEC72274AE7AE00A954AD /* Constants.swift */,
+				5B8AEC74274B0CC800A954AD /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -259,7 +254,7 @@
 				5BE73DF62746764100EEA7B3 /* CamlistUITests */,
 				5BE73DD42746763900EEA7B3 /* Products */,
 				4E8A048D4D55FDCDCDFEDDA9 /* Pods */,
-				358F001785DD3D5496AC628E /* Frameworks */,
+				F6C57E6FFBF27C9F1F15A7EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -394,6 +389,7 @@
 			children = (
 				5BE73DD62746763900EEA7B3 /* AppDelegate.swift */,
 				5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */,
+				5B8AEC76274B145B00A954AD /* MainAppController.swift */,
 				5BFD7C92274992810042A36A /* LocationManager */,
 			);
 			path = Application;
@@ -471,6 +467,16 @@
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
+		F6C57E6FFBF27C9F1F15A7EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */,
+				9F0D2295EBADE3F9E45CAA97 /* Pods_Camlist_CamlistUITests.framework */,
+				D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,11 +484,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE73DFD2746764100EEA7B3 /* Build configuration list for PBXNativeTarget "Camlist" */;
 			buildPhases = (
-				7EE7DEDD8ECED0AAD1FB2B24 /* [CP] Check Pods Manifest.lock */,
+				EE550A154ACEC1CB0F166100 /* [CP] Check Pods Manifest.lock */,
 				5BE73DCF2746763900EEA7B3 /* Sources */,
 				5BE73DD02746763900EEA7B3 /* Frameworks */,
 				5BE73DD12746763900EEA7B3 /* Resources */,
-				1FAE94521C771CB4BEEF9CA8 /* [CP] Embed Pods Frameworks */,
+				862DD6BD0E954A4AA9599CD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -497,7 +503,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE73E002746764100EEA7B3 /* Build configuration list for PBXNativeTarget "CamlistTests" */;
 			buildPhases = (
-				22A599D6C1A2E7CB2F7B1E23 /* [CP] Check Pods Manifest.lock */,
+				BF8A837E2F54B325CA800342 /* [CP] Check Pods Manifest.lock */,
 				5BE73DE52746764000EEA7B3 /* Sources */,
 				5BE73DE62746764000EEA7B3 /* Frameworks */,
 				5BE73DE72746764000EEA7B3 /* Resources */,
@@ -516,11 +522,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE73E032746764100EEA7B3 /* Build configuration list for PBXNativeTarget "CamlistUITests" */;
 			buildPhases = (
-				17787BB986D63A1605B702A3 /* [CP] Check Pods Manifest.lock */,
+				7EF0AF99082E9D4CE5062EBB /* [CP] Check Pods Manifest.lock */,
 				5BE73DEF2746764100EEA7B3 /* Sources */,
 				5BE73DF02746764100EEA7B3 /* Frameworks */,
 				5BE73DF12746764100EEA7B3 /* Resources */,
-				5B53354B961D59A506DD2CA7 /* [CP] Embed Pods Frameworks */,
+				E8138B363FC7219D4E19C0FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -604,7 +610,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17787BB986D63A1605B702A3 /* [CP] Check Pods Manifest.lock */ = {
+		7EF0AF99082E9D4CE5062EBB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -626,7 +632,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1FAE94521C771CB4BEEF9CA8 /* [CP] Embed Pods Frameworks */ = {
+		862DD6BD0E954A4AA9599CD7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -643,7 +649,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22A599D6C1A2E7CB2F7B1E23 /* [CP] Check Pods Manifest.lock */ = {
+		BF8A837E2F54B325CA800342 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -665,7 +671,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5B53354B961D59A506DD2CA7 /* [CP] Embed Pods Frameworks */ = {
+		E8138B363FC7219D4E19C0FA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -682,7 +688,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7EE7DEDD8ECED0AAD1FB2B24 /* [CP] Check Pods Manifest.lock */ = {
+		EE550A154ACEC1CB0F166100 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -722,6 +728,7 @@
 				5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */,
 				5BE73E1127467E5600EEA7B3 /* FetchVenueUseCase.swift in Sources */,
 				5B73DB0C27491E09008B6DC0 /* VenueImageMapper.swift in Sources */,
+				5B8AEC75274B0CC800A954AD /* Utils.swift in Sources */,
 				5B8AEC64274A6EED00A954AD /* LocalVenueLoader.swift in Sources */,
 				5B7E26682748207100D5EB0B /* VenueCellController.swift in Sources */,
 				5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */,
@@ -729,6 +736,7 @@
 				5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */,
 				5B8AEC71274AE6C800A954AD /* UIViewController+ShowAlertMsg.swift in Sources */,
 				5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				5B8AEC77274B145B00A954AD /* MainAppController.swift in Sources */,
 				5BE73E2C2746A39500EEA7B3 /* EndPoint.swift in Sources */,
 				5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */,
 				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
@@ -911,7 +919,7 @@
 		};
 		5BE73DFE2746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C38F3C289A010D39F0FDE70 /* Pods-Camlist.debug.xcconfig */;
+			baseConfigurationReference = 495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */;
 			buildSettings = {
 				API_BASE_URL = "https://api.foursquare.com/v3/places";
 				API_KEY = "fsq3i7zLlSfxIcEDGcdVZovKT9XZpi3wZGmDCSSD30p/lkA=";
@@ -947,7 +955,7 @@
 		};
 		5BE73DFF2746764100EEA7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFFF50E81738D296AC4E5CFC /* Pods-Camlist.release.xcconfig */;
+			baseConfigurationReference = F8F3B8B3DA266B7456DD1681 /* Pods-Camlist.release.xcconfig */;
 			buildSettings = {
 				API_BASE_URL = "https://api.foursquare.com/v3/places";
 				API_KEY = "fsq3i7zLlSfxIcEDGcdVZovKT9XZpi3wZGmDCSSD30p/lkA=";
@@ -983,7 +991,7 @@
 		};
 		5BE73E012746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9350F3498068C55005495AE8 /* Pods-CamlistTests.debug.xcconfig */;
+			baseConfigurationReference = F92798D10A33BF32AB37CA99 /* Pods-CamlistTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1011,7 +1019,7 @@
 		};
 		5BE73E022746764100EEA7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1B6BDA0A441297D3D7C8C15 /* Pods-CamlistTests.release.xcconfig */;
+			baseConfigurationReference = DCB483AAD8808528CBF2CD7D /* Pods-CamlistTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1038,7 +1046,7 @@
 		};
 		5BE73E042746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC0A51539511050F6D06EFFF /* Pods-Camlist-CamlistUITests.debug.xcconfig */;
+			baseConfigurationReference = CB3B532D114C2E9163E4E3B0 /* Pods-Camlist-CamlistUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1062,7 +1070,7 @@
 		};
 		5BE73E052746764100EEA7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC10AAA76319F4253DA79F42 /* Pods-Camlist-CamlistUITests.release.xcconfig */;
+			baseConfigurationReference = 1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
