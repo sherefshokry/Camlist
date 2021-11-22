@@ -1,0 +1,22 @@
+PODS:
+  - KVNProgress (2.3.5)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+
+DEPENDENCIES:
+  - KVNProgress
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - KVNProgress
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  KVNProgress: d7046cce142f1aeb740db39dc3cacfe910fac354
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+
+PODFILE CHECKSUM: dc788e574213eba39c03cd3fe75541942a02ac7a
+
+COCOAPODS: 1.11.2
