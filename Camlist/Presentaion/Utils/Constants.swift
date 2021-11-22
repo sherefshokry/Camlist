@@ -21,8 +21,8 @@ class Constants {
         static var SINGLE_UPDATE = "Single Update"
         static var SOMETHING_WRONG = "Something Went Wrong !!"
         static var NO_DATA = "No Data Found !!"
-        static var SINGLE_UPDATE_MSG = "Do you want to change current app status to single update"
-        static var REALTIME_MSG = "Do you want to change current app status to Realtime"
+        static var SINGLE_UPDATE_MSG = "Do you want to change current app mode to Single Update"
+        static var REALTIME_MSG = "Do you want to change current app mode to Realtime"
         static var WAIT = "Please Wait ...."
         static var UNABLE_FETCH_LOCATION = "Unable to fetch location"
     }

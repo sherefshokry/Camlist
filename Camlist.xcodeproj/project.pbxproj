@@ -938,9 +938,10 @@
 				DEVELOPMENT_TEAM = 5RLD3B22VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Camlist/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to access your location to fetch nearby places around you";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
+				INFOPLIST_KEY_CFBundleDisplayName = "Camlist Task";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) needs location permission to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "$(PRODUCT_NAME) needs location permission to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) needs location permission to fetch nearby places around you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -974,9 +975,10 @@
 				DEVELOPMENT_TEAM = 5RLD3B22VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Camlist/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to access your location to fetch nearby places around you";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to fetch nearby places around you";
+				INFOPLIST_KEY_CFBundleDisplayName = "Camlist Task";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) needs location permission to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "$(PRODUCT_NAME) needs location permission to fetch nearby places around you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) needs location permission to fetch nearby places around you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
