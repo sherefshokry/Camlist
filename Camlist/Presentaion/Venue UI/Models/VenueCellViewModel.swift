@@ -33,30 +33,33 @@ class VenueCellViewModel{
     
     
     func loadImageData(){
-       task = useCase.execute(venueId: model.id) {[weak self] result in
+        task = useCase.execute(venueId: model.id, cached: {[weak self] cachedImage in
+            let cachedImageURL = self?.prepareImageUrl(with: cachedImage)
+            
+            self?.onImageLoad?(cachedImageURL!)
+            
+        }, completion: {[weak self] result in
             self?.handle(result: result)
-        }
+        })
     }
     
     private struct EmptyValuesRepresentation: Error {}
     
-    func handle(result: Result<[VenueImage],Error>) {
+    func handle(result: Result<VenueImage,Error>) {
         
         switch result{
-        case let .success(venueItems):
-            if !venueItems.isEmpty{
-                onImageLoad?(prepareImageUrl(with: venueItems[0]))
-            }else{
-                onImageFailedToLoad?(EmptyValuesRepresentation())
-            }
-        case let .failure(error):
-            onImageFailedToLoad?(error)
+        case let .success(venueImage):
+            onImageLoad?(prepareImageUrl(with: venueImage))
+        case  .failure(_):
+            //    onImageFailedToLoad?(error)
+            break
+        
         }
         
         
     }
     
-
+    
     func cancelImageDataLoad(){
         task?.cancel()
     }

@@ -71,8 +71,8 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
     }
 }
 
-extension VenueViewController: UITableViewDataSource,UITableViewDelegate,UITableViewDataSourcePrefetching {
-    
+extension VenueViewController: UITableViewDataSource,UITableViewDelegate {
+//    ,UITableViewDataSourcePrefetching
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return venueItems[indexPath.row].view(tableView: tableView)
     }
@@ -85,26 +85,26 @@ extension VenueViewController: UITableViewDataSource,UITableViewDelegate,UITable
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        venueItems[indexPath.row].cancelLoad()
-    }
+//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        venueItems[indexPath.row].cancelLoad()
+//    }
+//
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        venueItems[indexPath.row].preload()
+//    }
+//
+//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+//        indexPaths.forEach { indexPath in
+//         _ = venueItems[indexPath.row]
+//        }
+//    }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        venueItems[indexPath.row].preload()
-    }
     
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        indexPaths.forEach { indexPath in
-         _ = venueItems[indexPath.row]
-        }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        indexPaths.forEach { indexPath in
-            venueItems[indexPath.row].cancelLoad()
-        }
-    }
+//    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+//        indexPaths.forEach { indexPath in
+//            venueItems[indexPath.row].cancelLoad()
+//        }
+//    }
     
     
     

@@ -2,23 +2,25 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>
-        <relationship name="venueEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueEntity" inverseName="location" inverseEntity="VenueEntity"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueEntity" inverseName="location" inverseEntity="VenueEntity"/>
     </entity>
     <entity name="VenueEntity" representedClassName="VenueEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationEntity" inverseName="venueEntity" inverseEntity="LocationEntity"/>
+        <attribute name="venueID" optional="YES" attributeType="String"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationEntity" inverseName="venue" inverseEntity="LocationEntity"/>
+        <relationship name="venueImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueImageEntity" inverseName="venueEntity" inverseEntity="VenueImageEntity"/>
     </entity>
     <entity name="VenueImageEntity" representedClassName="VenueImageEntity" syncable="YES" codeGenerationType="class">
         <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="imageID" optional="YES" attributeType="String"/>
         <attribute name="prefix" optional="YES" attributeType="String"/>
         <attribute name="suffix" optional="YES" attributeType="String"/>
         <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="venueEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueEntity" inverseName="venueImage" inverseEntity="VenueEntity"/>
     </entity>
     <elements>
-        <element name="VenueEntity" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="LocationEntity" positionX="-54" positionY="9" width="128" height="59"/>
-        <element name="VenueImageEntity" positionX="-36" positionY="18" width="128" height="104"/>
+        <element name="LocationEntity" positionX="-65.0765380859375" positionY="-209.1533966064453" width="128" height="73"/>
+        <element name="VenueEntity" positionX="-292.1509399414062" positionY="-186.2808685302734" width="128" height="89"/>
+        <element name="VenueImageEntity" positionX="31.8258056640625" positionY="-123.6787414550781" width="128" height="119"/>
     </elements>
 </model>

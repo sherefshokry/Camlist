@@ -31,7 +31,7 @@ class VenueUpdateViewController {
         LocationManager.shared.getLocation {[weak self] (location:CLLocation?, error:NSError?) in
             
             if let error = error {
-                self?.onShowErrorMessage?(error.localizedDescription)
+                print(error) 
                 return
             }
 

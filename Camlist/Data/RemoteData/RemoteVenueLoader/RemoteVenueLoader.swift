@@ -26,11 +26,11 @@ struct RemoteVenueLoader: VenueRepository{
         client.get(from: urlRequest) { result in
             switch result {
             case let .success((data,response)):
-                let mappedData = VenueItemsMapper.map(data,response)
-                if case let .success(venueItems) = mappedData {
+                let mappedResponseData = VenueItemsMapper.map(data,response)
+                if case let .success(venueItems) = mappedResponseData {
                     venueResponseStorage.saveResponse(with: venueItems)
                 }
-                completion(mappedData)
+                completion(mappedResponseData)
             case .failure:
                 
                 

@@ -19,7 +19,7 @@ final class CoreDataVenueResponseStorage {
     // MARK: - Private
     
     private func fetchRequest() -> NSFetchRequest<VenueEntity> {
-        let request: NSFetchRequest = VenueEntity.fetchRequest()
+        let request: NSFetchRequest<VenueEntity> = VenueEntity.fetchRequest()
         return request
     }
     
@@ -49,7 +49,7 @@ extension CoreDataVenueResponseStorage: VenueResponseStorage {
                 
                 requestEntity.forEach { entity in
                     let location = VenueLocation(address: entity.location?.address)
-                    venueItems.append(Venue(id: entity.id ?? "", name: entity.name ?? "", location: location))
+                    venueItems.append(Venue(id: entity.venueID ?? "", name: entity.name ?? "", location: location))
                 }
                 
                 completion(.success(venueItems))
@@ -69,7 +69,7 @@ extension CoreDataVenueResponseStorage: VenueResponseStorage {
                     let entity : VenueEntity = .init(context: context)
                     let locationEntity: LocationEntity = .init(context: context)
                     locationEntity.address = venue.location.address
-                    entity.id = venue.id
+                    entity.venueID = venue.id
                     entity.name = venue.name
                     entity.location = locationEntity
                 }

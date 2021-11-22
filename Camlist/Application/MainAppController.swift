@@ -18,7 +18,8 @@ final class MainAppController{
         let localVenueLoader = LocalVenueLoader(venueResponseStorage: venueResponseStorage)
         let venueRepo = VenueRepoWithFallBack(primary: remoteVenueLoader, fallback: localVenueLoader)
         let fetchVenueUseCase = DefaultFetchVenueUseCase(venueRepository: venueRepo)
-        let venueImageRepo = RemoteVenueImageLoader(client: client)
+        let venueImageResponseStorage = CoreDataVenueImageResponseStorage()
+        let venueImageRepo = RemoteVenueImageLoader(client: client, venueResponseStorage: venueImageResponseStorage)
         let fetchVenueImageUseCase = DefaultFetchVenueImageUseCase(venueRepository: venueImageRepo)
         return VenueUIComposer.venueComposedWith(fetchVenueUseCase: fetchVenueUseCase, fetchVenueImageUseCase: fetchVenueImageUseCase)
     }
