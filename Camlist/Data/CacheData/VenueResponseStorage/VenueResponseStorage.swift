@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol VenueResponseStorage {
-    func getResponse(completion: @escaping (Result<[Venue]?, CoreDataStorageError>) -> Void)
-    func saveResponse(with venueList: [Venue])
+public protocol VenueResponseStorage {
+     func getResponse(completion: @escaping (Result<[Venue]?, CoreDataStorageError>) -> Void)
+     func saveResponse(with venueList: [Venue])
 }

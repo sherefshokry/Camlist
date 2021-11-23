@@ -14,7 +14,19 @@ final class MainAppController{
     func makeVenueScene() -> VenueViewController {
         let client = URLSessionHTTPClient()
         let venueResponseStorage = CoreDataVenueResponseStorage()
-        let remoteVenueLoader = RemoteVenueLoader(client: client, venueResponseStorage: venueResponseStorage)
+        
+        let userLocation = defaultLocation()
+        let urlRequest = APIEndPoints.getVenuesURLRequest(userLocation: userLocation)
+        let remoteVenueLoader = RemoteVenueLoader(client: client, venueResponseStorage: venueResponseStorage, urlRequest: urlRequest)
+        
+        NotificationCenter.default.addObserver(forName:NSNotification.Name(Constants.CustomNotification.UPDATE_LOCATION_NOTIFICATION), object: nil, queue: nil) { notification in
+            
+            if let dict = notification.userInfo as NSDictionary? {
+                if let updatedUserLocation = dict["location"] as? UserLocation{
+                    remoteVenueLoader.urlRequest = APIEndPoints.getVenuesURLRequest(userLocation: updatedUserLocation)
+                }
+            }
+        }
         let localVenueLoader = LocalVenueLoader(venueResponseStorage: venueResponseStorage)
         let venueRepo = VenueRepoWithFallBack(primary: remoteVenueLoader, fallback: localVenueLoader)
         let fetchVenueUseCase = DefaultFetchVenueUseCase(venueRepository: venueRepo)
@@ -23,5 +35,12 @@ final class MainAppController{
         let fetchVenueImageUseCase = DefaultFetchVenueImageUseCase(venueRepository: venueImageRepo)
         return VenueUIComposer.venueComposedWith(fetchVenueUseCase: fetchVenueUseCase, fetchVenueImageUseCase: fetchVenueImageUseCase)
     }
+
+    
+    private func defaultLocation() -> UserLocation{
+        return UserLocation(lat: 30.0511, lng: 31.2126)
+    }
+    
+    
     
 }

@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct VenueLocation {
-    let address: String?
+public struct VenueLocation: Equatable,Codable {
+    public let address: String?
+    
+    public init(address: String?) {
+        self.address = address
+    }
 }

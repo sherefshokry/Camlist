@@ -41,18 +41,12 @@ class VenueUpdateViewController {
             }
             
             let userLocation = UserLocation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-            self?.saveUserCurrentLocation(userLocation: userLocation)
+            NotificationCenter.default.post(name: Notification.Name(Constants.CustomNotification.UPDATE_LOCATION_NOTIFICATION), object: nil, userInfo: ["location" : userLocation])
             
             self?.viewModel.loadVenues()
         }
     }
     
-    func saveUserCurrentLocation(userLocation: UserLocation){
-        if let value = try? JSONEncoder().encode(userLocation) {
-            UserDefaults.standard.set(value, forKey: Constants.DefaultCaching.USER_LOCATION)
-            UserDefaults.standard.synchronize()
-        }
-    }
     
     
     func bind(_ loadedView: UIView) {

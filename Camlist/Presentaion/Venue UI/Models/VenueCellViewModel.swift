@@ -33,7 +33,8 @@ class VenueCellViewModel{
     
     
     func loadImageData(){
-        task = useCase.execute(venueId: model.id, cached: {[weak self] cachedImage in
+        //task =
+        useCase.execute(venueId: model.id, cached: {[weak self] cachedImage in
             let cachedImageURL = self?.prepareImageUrl(with: cachedImage)
             
             self?.onImageLoad?(cachedImageURL!)

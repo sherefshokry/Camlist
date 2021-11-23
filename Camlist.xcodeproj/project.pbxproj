@@ -17,6 +17,7 @@
 		5B7E26682748207100D5EB0B /* VenueCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E26672748207100D5EB0B /* VenueCellController.swift */; };
 		5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */; };
 		5B7E266D2748362200D5EB0B /* VenueViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */; };
+		5B82E80A274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */; };
 		5B8AEC5E274A67F800A954AD /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC5C274A67F800A954AD /* CoreDataStorage.xcdatamodeld */; };
 		5B8AEC61274A684700A954AD /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC60274A684700A954AD /* CoreDataStorage.swift */; };
 		5B8AEC64274A6EED00A954AD /* LocalVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */; };
@@ -33,8 +34,6 @@
 		5BE73DDB2746763900EEA7B3 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DDA2746763900EEA7B3 /* VenueViewController.swift */; };
 		5BE73DE02746764000EEA7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE73DDF2746764000EEA7B3 /* Assets.xcassets */; };
 		5BE73DE32746764000EEA7B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE73DE12746764000EEA7B3 /* LaunchScreen.storyboard */; };
-		5BE73DF82746764100EEA7B3 /* CamlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DF72746764100EEA7B3 /* CamlistUITests.swift */; };
-		5BE73DFA2746764100EEA7B3 /* CamlistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73DF92746764100EEA7B3 /* CamlistUITestsLaunchTests.swift */; };
 		5BE73E0B27467AE300EEA7B3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E0A27467AE300EEA7B3 /* Venue.swift */; };
 		5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E0C27467AF200EEA7B3 /* VenueLocation.swift */; };
 		5BE73E0F27467C7900EEA7B3 /* VenueImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E0E27467C7900EEA7B3 /* VenueImage.swift */; };
@@ -42,7 +41,7 @@
 		5BE73E1327467EB500EEA7B3 /* FetchVenueImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E1227467EB500EEA7B3 /* FetchVenueImageUseCase.swift */; };
 		5BE73E162746851D00EEA7B3 /* VenuesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E152746851D00EEA7B3 /* VenuesRepository.swift */; };
 		5BE73E182746853100EEA7B3 /* VenueImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E172746853100EEA7B3 /* VenueImageRepository.swift */; };
-		5BE73E1F27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E1E27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift */; };
+		5BE73E1F27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E1E27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift */; };
 		5BE73E2427468FAA00EEA7B3 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */; };
 		5BE73E2627468FEE00EEA7B3 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */; };
 		5BE73E282746915500EEA7B3 /* RemoteVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */; };
@@ -53,19 +52,11 @@
 		5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */; };
 		5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E372746E1F600EEA7B3 /* VenueCell.swift */; };
 		5BFD7C942749929C0042A36A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD7C932749929C0042A36A /* LocationManager.swift */; };
-		9D3F1911D5BB21C7E3E64EC2 /* Pods_Camlist_CamlistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0D2295EBADE3F9E45CAA97 /* Pods_Camlist_CamlistUITests.framework */; };
 		A7CE9B6970FE05F5B6FCC6B7 /* Pods_CamlistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5BE73DEA2746764000EEA7B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5BE73DCB2746763900EEA7B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BE73DD22746763900EEA7B3;
-			remoteInfo = Camlist;
-		};
-		5BE73DF42746764100EEA7B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BE73DCB2746763900EEA7B3 /* Project object */;
 			proxyType = 1;
@@ -86,6 +77,7 @@
 		5B7E26672748207100D5EB0B /* VenueCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellController.swift; sourceTree = "<group>"; };
 		5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VenueViewController.storyboard; sourceTree = "<group>"; };
+		5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTrackingHelper.swift"; sourceTree = "<group>"; };
 		5B8AEC5D274A67F800A954AD /* VenueDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueDataModel.xcdatamodel; sourceTree = "<group>"; };
 		5B8AEC60274A684700A954AD /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVenueLoader.swift; sourceTree = "<group>"; };
@@ -105,9 +97,6 @@
 		5BE73DE22746764000EEA7B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE73DE42746764000EEA7B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE73DE92746764000EEA7B3 /* CamlistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamlistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BE73DF32746764100EEA7B3 /* CamlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BE73DF72746764100EEA7B3 /* CamlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamlistUITests.swift; sourceTree = "<group>"; };
-		5BE73DF92746764100EEA7B3 /* CamlistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamlistUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5BE73E0A27467AE300EEA7B3 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		5BE73E0C27467AF200EEA7B3 /* VenueLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueLocation.swift; sourceTree = "<group>"; };
 		5BE73E0E27467C7900EEA7B3 /* VenueImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImage.swift; sourceTree = "<group>"; };
@@ -115,7 +104,7 @@
 		5BE73E1227467EB500EEA7B3 /* FetchVenueImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVenueImageUseCase.swift; sourceTree = "<group>"; };
 		5BE73E152746851D00EEA7B3 /* VenuesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRepository.swift; sourceTree = "<group>"; };
 		5BE73E172746853100EEA7B3 /* VenueImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImageRepository.swift; sourceTree = "<group>"; };
-		5BE73E1E27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenuesLoaderTest.swift; sourceTree = "<group>"; };
+		5BE73E1E27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueLoaderTests.swift; sourceTree = "<group>"; };
 		5BE73E2327468FAA00EEA7B3 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5BE73E2527468FEE00EEA7B3 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		5BE73E272746915500EEA7B3 /* RemoteVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueLoader.swift; sourceTree = "<group>"; };
@@ -149,14 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7CE9B6970FE05F5B6FCC6B7 /* Pods_CamlistTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE73DF02746764100EEA7B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D3F1911D5BB21C7E3E64EC2 /* Pods_Camlist_CamlistUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +205,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		5B82E808274C2A080068F508 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		5B8AEC5F274A681700A954AD /* CoreDataStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +246,6 @@
 			children = (
 				5BE73DD52746763900EEA7B3 /* Camlist */,
 				5BE73DEC2746764000EEA7B3 /* CamlistTests */,
-				5BE73DF62746764100EEA7B3 /* CamlistUITests */,
 				5BE73DD42746763900EEA7B3 /* Products */,
 				4E8A048D4D55FDCDCDFEDDA9 /* Pods */,
 				F6C57E6FFBF27C9F1F15A7EF /* Frameworks */,
@@ -269,7 +257,6 @@
 			children = (
 				5BE73DD32746763900EEA7B3 /* Camlist.app */,
 				5BE73DE92746764000EEA7B3 /* CamlistTests.xctest */,
-				5BE73DF32746764100EEA7B3 /* CamlistUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,18 +280,10 @@
 		5BE73DEC2746764000EEA7B3 /* CamlistTests */ = {
 			isa = PBXGroup;
 			children = (
-				5BE73E1E27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift */,
+				5B82E808274C2A080068F508 /* Helpers */,
+				5BE73E1E27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift */,
 			);
 			path = CamlistTests;
-			sourceTree = "<group>";
-		};
-		5BE73DF62746764100EEA7B3 /* CamlistUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5BE73DF72746764100EEA7B3 /* CamlistUITests.swift */,
-				5BE73DF92746764100EEA7B3 /* CamlistUITestsLaunchTests.swift */,
-			);
-			path = CamlistUITests;
 			sourceTree = "<group>";
 		};
 		5BE73E0627467A1300EEA7B3 /* Domain */ = {
@@ -524,26 +503,6 @@
 			productReference = 5BE73DE92746764000EEA7B3 /* CamlistTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5BE73DF22746764100EEA7B3 /* CamlistUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BE73E032746764100EEA7B3 /* Build configuration list for PBXNativeTarget "CamlistUITests" */;
-			buildPhases = (
-				7EF0AF99082E9D4CE5062EBB /* [CP] Check Pods Manifest.lock */,
-				5BE73DEF2746764100EEA7B3 /* Sources */,
-				5BE73DF02746764100EEA7B3 /* Frameworks */,
-				5BE73DF12746764100EEA7B3 /* Resources */,
-				E8138B363FC7219D4E19C0FA /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BE73DF52746764100EEA7B3 /* PBXTargetDependency */,
-			);
-			name = CamlistUITests;
-			productName = CamlistUITests;
-			productReference = 5BE73DF32746764100EEA7B3 /* CamlistUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -560,10 +519,6 @@
 					5BE73DE82746764000EEA7B3 = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
-						TestTargetID = 5BE73DD22746763900EEA7B3;
-					};
-					5BE73DF22746764100EEA7B3 = {
-						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 5BE73DD22746763900EEA7B3;
 					};
 				};
@@ -583,7 +538,6 @@
 			targets = (
 				5BE73DD22746763900EEA7B3 /* Camlist */,
 				5BE73DE82746764000EEA7B3 /* CamlistTests */,
-				5BE73DF22746764100EEA7B3 /* CamlistUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -606,38 +560,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BE73DF12746764100EEA7B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7EF0AF99082E9D4CE5062EBB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Camlist-CamlistUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		862DD6BD0E954A4AA9599CD7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,23 +600,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8138B363FC7219D4E19C0FA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE550A154ACEC1CB0F166100 /* [CP] Check Pods Manifest.lock */ = {
@@ -769,16 +677,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE73E1F27468C3600EEA7B3 /* RemoteVenuesLoaderTest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE73DEF2746764100EEA7B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BE73DFA2746764100EEA7B3 /* CamlistUITestsLaunchTests.swift in Sources */,
-				5BE73DF82746764100EEA7B3 /* CamlistUITests.swift in Sources */,
+				5BE73E1F27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift in Sources */,
+				5B82E80A274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,11 +689,6 @@
 			isa = PBXTargetDependency;
 			target = 5BE73DD22746763900EEA7B3 /* Camlist */;
 			targetProxy = 5BE73DEA2746764000EEA7B3 /* PBXContainerItemProxy */;
-		};
-		5BE73DF52746764100EEA7B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5BE73DD22746763900EEA7B3 /* Camlist */;
-			targetProxy = 5BE73DF42746764100EEA7B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1054,54 +949,6 @@
 			};
 			name = Release;
 		};
-		5BE73E042746764100EEA7B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB3B532D114C2E9163E4E3B0 /* Pods-Camlist-CamlistUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5RLD3B22VC;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BlueCrunch.CamlistUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Camlist;
-			};
-			name = Debug;
-		};
-		5BE73E052746764100EEA7B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5RLD3B22VC;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BlueCrunch.CamlistUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Camlist;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1128,15 +975,6 @@
 			buildConfigurations = (
 				5BE73E012746764100EEA7B3 /* Debug */,
 				5BE73E022746764100EEA7B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BE73E032746764100EEA7B3 /* Build configuration list for PBXNativeTarget "CamlistUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BE73E042746764100EEA7B3 /* Debug */,
-				5BE73E052746764100EEA7B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

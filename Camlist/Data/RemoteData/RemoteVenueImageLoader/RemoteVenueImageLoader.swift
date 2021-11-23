@@ -18,7 +18,8 @@ public final class RemoteVenueImageLoader: VenueImageRepository{
         self.venueResponseStorage = venueResponseStorage
     }
     
-    func fetchVenueImage(venueId: String, cached: @escaping (VenueImage) -> Void, completion: @escaping (Result<VenueImage, Error>) -> Void) -> HTTPClientTask? {
+    func fetchVenueImage(venueId: String, cached: @escaping (VenueImage) -> Void, completion: @escaping (Result<VenueImage, Error>) -> Void)  {
+//        -> HTTPClientTask?
         let urlRequest = APIEndPoints.getVenueImageURLRequest(venueID: venueId)
         var task: HTTPClientTask?
         
@@ -27,7 +28,8 @@ public final class RemoteVenueImageLoader: VenueImageRepository{
                 cached(cachedImage!)
             }
             
-            task = self?.client.get(from: urlRequest) {[weak self] result in
+            //task =
+            self?.client.get(from: urlRequest) {[weak self] result in
                 guard self != nil else { return }
                 switch result {
                 case let .success((data,response)):
@@ -43,7 +45,7 @@ public final class RemoteVenueImageLoader: VenueImageRepository{
             }
            
         }
-        return task
+       // return task
     }
     
 }

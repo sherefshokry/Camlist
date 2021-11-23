@@ -21,7 +21,7 @@ final class DefaultFetchVenueUseCase: FetchVenueUseCase {
     }
     
     func execute(completion: @escaping (Result<[Venue], Error>) -> Void) {
-        venueRepository.fetchVenuesList() { result in
+        venueRepository.fetchVenueList() { result in
             completion(result)
         }
 

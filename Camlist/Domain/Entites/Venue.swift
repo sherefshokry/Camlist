@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct Venue {
-    let id: String
-    let name: String
-    let location: VenueLocation
+public struct Venue: Equatable,Codable {
+    public let id: String
+    public let name: String
+    public let location: VenueLocation
+    
+    public init(id: String, name: String, location: VenueLocation) {
+        self.id = id
+        self.name = name
+        self.location = location
+    }
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 protocol VenueImageRepository {
-    func fetchVenueImage(venueId: String,cached: @escaping (VenueImage) -> Void,completion: @escaping (Result<VenueImage,Error>) -> Void) -> HTTPClientTask?
+    func fetchVenueImage(venueId: String,cached: @escaping (VenueImage) -> Void,completion: @escaping (Result<VenueImage,Error>) -> Void)
+    //-> HTTPClientTask?
 }

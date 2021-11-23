@@ -13,45 +13,31 @@ public enum NetworkError : Swift.Error {
     case invalidData
 }
 
-struct RemoteVenueLoader: VenueRepository{
-    
+public class RemoteVenueLoader: VenueRepository{
+  
     let client : HTTPClient
     let venueResponseStorage: VenueResponseStorage
+    var urlRequest: URLRequest
     
+    public init(client: HTTPClient,venueResponseStorage: VenueResponseStorage,urlRequest: URLRequest) {
+        self.client = client
+        self.venueResponseStorage = venueResponseStorage
+        self.urlRequest = urlRequest
+    }
 
-    func fetchVenuesList(completion: @escaping (Result<[Venue], Error>) -> Void) {
-        let userLocation = loadUserLocation() ?? defaultLocation()
-        let urlRequest = APIEndPoints.getVenuesURLRequest(userLocation: userLocation)
-        
-        client.get(from: urlRequest) { result in
+   public func fetchVenueList(completion: @escaping (Result<[Venue], Error>) -> Void) {
+        client.get(from: urlRequest) {[weak self] result in
             switch result {
             case let .success((data,response)):
                 let mappedResponseData = VenueItemsMapper.map(data,response)
                 if case let .success(venueItems) = mappedResponseData {
-                    venueResponseStorage.saveResponse(with: venueItems)
+                   self?.venueResponseStorage.saveResponse(with: venueItems)
                 }
                 completion(mappedResponseData)
             case .failure:
-                
-                
                 completion(.failure(NetworkError.connectivity))
             }
         }
     }
-     
-    
-    func loadUserLocation() -> UserLocation? {
-        if let value = UserDefaults.standard.value(forKey: Constants.DefaultCaching.USER_LOCATION) as? Data {
-            if let user = try? JSONDecoder().decode(UserLocation.self, from: value ) {
-                return user
-            }
-        }
-        return nil
-    }
-    
-    func defaultLocation() -> UserLocation{
-        return UserLocation(lat: 30.0511, lng: 31.2126)
-    }
-    
-    
+
 }

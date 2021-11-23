@@ -29,8 +29,10 @@ class Constants {
     
     struct DefaultCaching{
         static var USER_LOCATION = "USER_LOCATION"
-        
-        
+    }
+    
+    struct CustomNotification{
+        static var UPDATE_LOCATION_NOTIFICATION = "UPDATE_LOCATION_NOTIFICATION"
     }
     
 }

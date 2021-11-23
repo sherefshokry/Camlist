@@ -18,7 +18,7 @@ struct LocalVenueLoader: VenueRepository {
     
     private struct UnExpectedValuesRepresntation: Error{}
     
-    func fetchVenuesList(completion: @escaping (Result<[Venue], Error>) -> Void) {
+    func fetchVenueList(completion: @escaping (Result<[Venue], Error>) -> Void) {
         
         venueResponseStorage.getResponse { result in
             switch result{
