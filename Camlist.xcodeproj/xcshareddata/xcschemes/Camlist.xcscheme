@@ -50,6 +50,16 @@
                ReferencedContainer = "container:Camlist.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5B82E810274D09910068F508"
+               BuildableName = "VenueApiEndtoEndTests.xctest"
+               BlueprintName = "VenueApiEndtoEndTests"
+               ReferencedContainer = "container:Camlist.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

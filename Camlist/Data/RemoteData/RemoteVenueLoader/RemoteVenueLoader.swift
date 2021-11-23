@@ -16,10 +16,10 @@ public enum NetworkError : Swift.Error {
 public class RemoteVenueLoader: VenueRepository{
   
     let client : HTTPClient
-    let venueResponseStorage: VenueResponseStorage
+    let venueResponseStorage: VenueResponseStorage?
     var urlRequest: URLRequest
     
-    public init(client: HTTPClient,venueResponseStorage: VenueResponseStorage,urlRequest: URLRequest) {
+    public init(client: HTTPClient,venueResponseStorage: VenueResponseStorage?,urlRequest: URLRequest) {
         self.client = client
         self.venueResponseStorage = venueResponseStorage
         self.urlRequest = urlRequest
@@ -31,7 +31,7 @@ public class RemoteVenueLoader: VenueRepository{
             case let .success((data,response)):
                 let mappedResponseData = VenueItemsMapper.map(data,response)
                 if case let .success(venueItems) = mappedResponseData {
-                   self?.venueResponseStorage.saveResponse(with: venueItems)
+                    self?.venueResponseStorage?.saveResponse(with: venueItems)
                 }
                 completion(mappedResponseData)
             case .failure:

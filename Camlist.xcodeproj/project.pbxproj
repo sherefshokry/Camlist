@@ -18,6 +18,8 @@
 		5B7E266B2748313300D5EB0B /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */; };
 		5B7E266D2748362200D5EB0B /* VenueViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */; };
 		5B82E80A274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */; };
+		5B82E81A274D0C480068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */; };
+		5B82E81F274D10FD0068F508 /* VenueApiEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B82E81E274D10FD0068F508 /* VenueApiEndToEndTests.swift */; };
 		5B8AEC5E274A67F800A954AD /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC5C274A67F800A954AD /* CoreDataStorage.xcdatamodeld */; };
 		5B8AEC61274A684700A954AD /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC60274A684700A954AD /* CoreDataStorage.swift */; };
 		5B8AEC64274A6EED00A954AD /* LocalVenueLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */; };
@@ -56,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5B82E815274D09910068F508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BE73DCB2746763900EEA7B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BE73DD22746763900EEA7B3;
+			remoteInfo = Camlist;
+		};
 		5BE73DEA2746764000EEA7B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BE73DCB2746763900EEA7B3 /* Project object */;
@@ -78,6 +87,8 @@
 		5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VenueViewController.storyboard; sourceTree = "<group>"; };
 		5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTrackingHelper.swift"; sourceTree = "<group>"; };
+		5B82E811274D09910068F508 /* VenueApiEndtoEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueApiEndtoEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B82E81E274D10FD0068F508 /* VenueApiEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueApiEndToEndTests.swift; sourceTree = "<group>"; };
 		5B8AEC5D274A67F800A954AD /* VenueDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueDataModel.xcdatamodel; sourceTree = "<group>"; };
 		5B8AEC60274A684700A954AD /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		5B8AEC63274A6EED00A954AD /* LocalVenueLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVenueLoader.swift; sourceTree = "<group>"; };
@@ -125,6 +136,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B82E80E274D09910068F508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BE73DD02746763900EEA7B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +231,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		5B82E812274D09910068F508 /* VenueApiEndtoEndTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B82E81E274D10FD0068F508 /* VenueApiEndToEndTests.swift */,
+			);
+			path = VenueApiEndtoEndTests;
+			sourceTree = "<group>";
+		};
 		5B8AEC5F274A681700A954AD /* CoreDataStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +272,7 @@
 			children = (
 				5BE73DD52746763900EEA7B3 /* Camlist */,
 				5BE73DEC2746764000EEA7B3 /* CamlistTests */,
+				5B82E812274D09910068F508 /* VenueApiEndtoEndTests */,
 				5BE73DD42746763900EEA7B3 /* Products */,
 				4E8A048D4D55FDCDCDFEDDA9 /* Pods */,
 				F6C57E6FFBF27C9F1F15A7EF /* Frameworks */,
@@ -257,6 +284,7 @@
 			children = (
 				5BE73DD32746763900EEA7B3 /* Camlist.app */,
 				5BE73DE92746764000EEA7B3 /* CamlistTests.xctest */,
+				5B82E811274D09910068F508 /* VenueApiEndtoEndTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -465,6 +493,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B82E810274D09910068F508 /* VenueApiEndtoEndTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B82E817274D09910068F508 /* Build configuration list for PBXNativeTarget "VenueApiEndtoEndTests" */;
+			buildPhases = (
+				5B82E80D274D09910068F508 /* Sources */,
+				5B82E80E274D09910068F508 /* Frameworks */,
+				5B82E80F274D09910068F508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B82E816274D09910068F508 /* PBXTargetDependency */,
+			);
+			name = VenueApiEndtoEndTests;
+			productName = VenueApiEndtoEndTests;
+			productReference = 5B82E811274D09910068F508 /* VenueApiEndtoEndTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5BE73DD22746763900EEA7B3 /* Camlist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE73DFD2746764100EEA7B3 /* Build configuration list for PBXNativeTarget "Camlist" */;
@@ -513,6 +559,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					5B82E810274D09910068F508 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 5BE73DD22746763900EEA7B3;
+					};
 					5BE73DD22746763900EEA7B3 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -538,11 +588,19 @@
 			targets = (
 				5BE73DD22746763900EEA7B3 /* Camlist */,
 				5BE73DE82746764000EEA7B3 /* CamlistTests */,
+				5B82E810274D09910068F508 /* VenueApiEndtoEndTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B82E80F274D09910068F508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BE73DD12746763900EEA7B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,6 +685,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B82E80D274D09910068F508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B82E81A274D0C480068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */,
+				5B82E81F274D10FD0068F508 /* VenueApiEndToEndTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BE73DCF2746763900EEA7B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -685,6 +752,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5B82E816274D09910068F508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BE73DD22746763900EEA7B3 /* Camlist */;
+			targetProxy = 5B82E815274D09910068F508 /* PBXContainerItemProxy */;
+		};
 		5BE73DEB2746764000EEA7B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5BE73DD22746763900EEA7B3 /* Camlist */;
@@ -704,6 +776,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5B82E818274D09910068F508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RLD3B22VC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BlueCrunch.VenueApiEndtoEndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camlist.app/Camlist";
+			};
+			name = Debug;
+		};
+		5B82E819274D09910068F508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RLD3B22VC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BlueCrunch.VenueApiEndtoEndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camlist.app/Camlist";
+			};
+			name = Release;
+		};
 		5BE73DFB2746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -952,6 +1072,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B82E817274D09910068F508 /* Build configuration list for PBXNativeTarget "VenueApiEndtoEndTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B82E818274D09910068F508 /* Debug */,
+				5B82E819274D09910068F508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5BE73DCE2746763900EEA7B3 /* Build configuration list for PBXProject "Camlist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

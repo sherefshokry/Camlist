@@ -4,11 +4,9 @@
 //
 //  Created by SherifShokry on 18/11/2021.
 //
-
 import Foundation
 import XCTest
 import Camlist
-
 
 class RemoteVenueLoaderTests: XCTestCase {
     
@@ -143,8 +141,8 @@ class RemoteVenueLoaderTests: XCTestCase {
         
         sut.fetchVenueList { result in
             switch result{
-            case let .success(recivedResult):
-                XCTAssertEqual(expectedResult, recivedResult)
+            case let .success(receivedResult):
+                XCTAssertEqual(expectedResult, receivedResult)
             case  .failure(_):
                 XCTFail("UnExpected Result")
             }
@@ -165,11 +163,9 @@ class RemoteVenueLoaderTests: XCTestCase {
     
     func makeSUT(urlRequest: URLRequest = URLRequest(url: URL(string: "www.any-url.com")!),_ file: StaticString = #filePath ,_ line: UInt = #line) -> (sut: RemoteVenueLoader,client: HTTPClientSpy){
         let client = HTTPClientSpy()
-        let cache = VenueResponseStorageSpy()
-        let sut = RemoteVenueLoader(client: client, venueResponseStorage: cache, urlRequest: urlRequest)
+        let sut = RemoteVenueLoader(client: client, venueResponseStorage: nil, urlRequest: urlRequest)
         trackForMemoryLeaks(sut,file,line)
         trackForMemoryLeaks(client,file,line)
-        trackForMemoryLeaks(cache,file,line)
         return (sut,client)
     }
     
@@ -226,17 +222,5 @@ class RemoteVenueLoaderTests: XCTestCase {
         }
         
     }
-    
-    
-    class VenueResponseStorageSpy: VenueResponseStorage{
-        func getResponse(completion: @escaping (Result<[Venue]?, CoreDataStorageError>) -> Void) {
-            
-        }
-        
-        func saveResponse(with venueList: [Venue]) {
-            
-        }
-        
-    }
-    
+
 }
