@@ -4,7 +4,6 @@
 //
 //  Created by SherifShokry on 20/11/2021.
 //
-
 import Foundation
 
 class VenueCellViewModel{
@@ -42,6 +41,7 @@ class VenueCellViewModel{
             self?.onImageLoad?(cachedImageURL!)
             
         }, completion: {[weak self] result in
+            
             self?.handle(result: result)
         })
     }

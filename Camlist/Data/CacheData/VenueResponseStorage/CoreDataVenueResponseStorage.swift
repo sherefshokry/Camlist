@@ -76,6 +76,7 @@ extension CoreDataVenueResponseStorage: VenueResponseStorage {
                 
                 try context.save()
             }catch{
+                
                 debugPrint("Can not save venue response")
             }
             
