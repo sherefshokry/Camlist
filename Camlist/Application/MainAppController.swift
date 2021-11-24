@@ -27,11 +27,23 @@ final class MainAppController{
                 }
             }
         }
+        
         let localVenueLoader = LocalVenueLoader(venueResponseStorage: venueResponseStorage)
         let venueRepo = VenueRepoWithFallBack(primary: remoteVenueLoader, fallback: localVenueLoader)
         let fetchVenueUseCase = DefaultFetchVenueUseCase(venueRepository: venueRepo)
         let venueImageResponseStorage = CoreDataVenueImageResponseStorage()
-        let venueImageRepo = RemoteVenueImageLoader(client: client, venueResponseStorage: venueImageResponseStorage)
+        let imageUrlRequest = APIEndPoints.getVenueImageURLRequest(venueID: "-1")
+        let venueImageRepo = RemoteVenueImageLoader(client: client, venueResponseStorage: venueImageResponseStorage, urlRequest: imageUrlRequest,venueId: "-1")
+        
+        NotificationCenter.default.addObserver(forName:NSNotification.Name(Constants.CustomNotification.UPDATE_VENUE_ID), object: nil, queue: nil) { notification in
+            if let dict = notification.userInfo as NSDictionary? {
+                if let updatedVenueID = dict["venueID"] as? String{
+                    venueImageRepo.urlRequest = APIEndPoints.getVenueImageURLRequest(venueID: updatedVenueID)
+                    venueImageRepo.venueId = updatedVenueID
+                }
+            }
+        }
+    
         let fetchVenueImageUseCase = DefaultFetchVenueImageUseCase(venueRepository: venueImageRepo)
         return VenueUIComposer.venueComposedWith(fetchVenueUseCase: fetchVenueUseCase, fetchVenueImageUseCase: fetchVenueImageUseCase)
     }

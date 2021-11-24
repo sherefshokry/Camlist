@@ -8,7 +8,14 @@
 import UIKit
 import MapKit
 
-final class LocationManager: NSObject {
+protocol LocationManagerService{
+    typealias LocationClosure = ((_ location:CLLocation?,_ error: NSError?)->Void)
+    
+    func getLocation(completionHandler:@escaping LocationClosure)
+}
+
+
+final class LocationManager: NSObject,LocationManagerService {
     
     enum LocationErrors: String {
         case denied = "Locations are turned off. Please turn it on in Settings"

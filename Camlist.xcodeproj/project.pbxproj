@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3BABCFBD9B91B999F2F161E6 /* Pods_Camlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */; };
 		5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */; };
+		5B586314274D76A400085DA8 /* VenueViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B586313274D76A400085DA8 /* VenueViewControllerTests.swift */; };
+		5B586318274D897900085DA8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B586317274D897900085DA8 /* main.swift */; };
+		5B58631A274DB49A00085DA8 /* RemoteVenueImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B586319274DB49A00085DA8 /* RemoteVenueImageLoader.swift */; };
 		5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */; };
 		5B73DB0C27491E09008B6DC0 /* VenueImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */; };
 		5B7E2661274807BB00D5EB0B /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E2660274807BB00D5EB0B /* VenueViewModel.swift */; };
@@ -78,6 +81,9 @@
 		1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.release.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.release.xcconfig"; sourceTree = "<group>"; };
 		495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.debug.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.debug.xcconfig"; sourceTree = "<group>"; };
 		5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
+		5B586313274D76A400085DA8 /* VenueViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewControllerTests.swift; sourceTree = "<group>"; };
+		5B586317274D897900085DA8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5B586319274DB49A00085DA8 /* RemoteVenueImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueImageLoader.swift; sourceTree = "<group>"; };
 		5B73DB0927491C41008B6DC0 /* RemoteVenueImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVenueImageLoader.swift; sourceTree = "<group>"; };
 		5B73DB0B27491E09008B6DC0 /* VenueImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueImageMapper.swift; sourceTree = "<group>"; };
 		5B7E2660274807BB00D5EB0B /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
@@ -87,7 +93,7 @@
 		5B7E266A2748313300D5EB0B /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		5B7E266C2748362200D5EB0B /* VenueViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VenueViewController.storyboard; sourceTree = "<group>"; };
 		5B82E809274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTrackingHelper.swift"; sourceTree = "<group>"; };
-		5B82E811274D09910068F508 /* VenueApiEndtoEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueApiEndtoEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B82E811274D09910068F508 /* CamlistEndtoEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamlistEndtoEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B82E81E274D10FD0068F508 /* VenueApiEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueApiEndToEndTests.swift; sourceTree = "<group>"; };
 		5B8AEC5D274A67F800A954AD /* VenueDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueDataModel.xcdatamodel; sourceTree = "<group>"; };
 		5B8AEC60274A684700A954AD /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
@@ -231,12 +237,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		5B82E812274D09910068F508 /* VenueApiEndtoEndTests */ = {
+		5B82E812274D09910068F508 /* CamlistEndtoEndTests */ = {
 			isa = PBXGroup;
 			children = (
 				5B82E81E274D10FD0068F508 /* VenueApiEndToEndTests.swift */,
 			);
-			path = VenueApiEndtoEndTests;
+			path = CamlistEndtoEndTests;
 			sourceTree = "<group>";
 		};
 		5B8AEC5F274A681700A954AD /* CoreDataStorage */ = {
@@ -272,7 +278,7 @@
 			children = (
 				5BE73DD52746763900EEA7B3 /* Camlist */,
 				5BE73DEC2746764000EEA7B3 /* CamlistTests */,
-				5B82E812274D09910068F508 /* VenueApiEndtoEndTests */,
+				5B82E812274D09910068F508 /* CamlistEndtoEndTests */,
 				5BE73DD42746763900EEA7B3 /* Products */,
 				4E8A048D4D55FDCDCDFEDDA9 /* Pods */,
 				F6C57E6FFBF27C9F1F15A7EF /* Frameworks */,
@@ -284,7 +290,7 @@
 			children = (
 				5BE73DD32746763900EEA7B3 /* Camlist.app */,
 				5BE73DE92746764000EEA7B3 /* CamlistTests.xctest */,
-				5B82E811274D09910068F508 /* VenueApiEndtoEndTests.xctest */,
+				5B82E811274D09910068F508 /* CamlistEndtoEndTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,6 +316,8 @@
 			children = (
 				5B82E808274C2A080068F508 /* Helpers */,
 				5BE73E1E27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift */,
+				5B586319274DB49A00085DA8 /* RemoteVenueImageLoader.swift */,
+				5B586313274D76A400085DA8 /* VenueViewControllerTests.swift */,
 			);
 			path = CamlistTests;
 			sourceTree = "<group>";
@@ -404,6 +412,7 @@
 				5BE73DD62746763900EEA7B3 /* AppDelegate.swift */,
 				5BE73E2D2746A76900EEA7B3 /* AppConfigrution.swift */,
 				5B8AEC76274B145B00A954AD /* MainAppController.swift */,
+				5B586317274D897900085DA8 /* main.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -493,9 +502,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B82E810274D09910068F508 /* VenueApiEndtoEndTests */ = {
+		5B82E810274D09910068F508 /* CamlistEndtoEndTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B82E817274D09910068F508 /* Build configuration list for PBXNativeTarget "VenueApiEndtoEndTests" */;
+			buildConfigurationList = 5B82E817274D09910068F508 /* Build configuration list for PBXNativeTarget "CamlistEndtoEndTests" */;
 			buildPhases = (
 				5B82E80D274D09910068F508 /* Sources */,
 				5B82E80E274D09910068F508 /* Frameworks */,
@@ -506,9 +515,9 @@
 			dependencies = (
 				5B82E816274D09910068F508 /* PBXTargetDependency */,
 			);
-			name = VenueApiEndtoEndTests;
+			name = CamlistEndtoEndTests;
 			productName = VenueApiEndtoEndTests;
-			productReference = 5B82E811274D09910068F508 /* VenueApiEndtoEndTests.xctest */;
+			productReference = 5B82E811274D09910068F508 /* CamlistEndtoEndTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5BE73DD22746763900EEA7B3 /* Camlist */ = {
@@ -588,7 +597,7 @@
 			targets = (
 				5BE73DD22746763900EEA7B3 /* Camlist */,
 				5BE73DE82746764000EEA7B3 /* CamlistTests */,
-				5B82E810274D09910068F508 /* VenueApiEndtoEndTests */,
+				5B82E810274D09910068F508 /* CamlistEndtoEndTests */,
 			);
 		};
 /* End PBXProject section */
@@ -724,6 +733,7 @@
 				5B73DB0A27491C41008B6DC0 /* RemoteVenueImageLoader.swift in Sources */,
 				5BE73E0D27467AF200EEA7B3 /* VenueLocation.swift in Sources */,
 				5B8AEC5E274A67F800A954AD /* CoreDataStorage.xcdatamodeld in Sources */,
+				5B586318274D897900085DA8 /* main.swift in Sources */,
 				5B8AEC6F274AE6A300A954AD /* UIViewController+AlertWithCompletion.swift in Sources */,
 				5BE73E2E2746A76A00EEA7B3 /* AppConfigrution.swift in Sources */,
 				5B7E266527480C3700D5EB0B /* VenueUpdateViewController.swift in Sources */,
@@ -744,7 +754,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B58631A274DB49A00085DA8 /* RemoteVenueImageLoader.swift in Sources */,
 				5BE73E1F27468C3600EEA7B3 /* RemoteVenueLoaderTests.swift in Sources */,
+				5B586314274D76A400085DA8 /* VenueViewControllerTests.swift in Sources */,
 				5B82E80A274C2A2A0068F508 /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1072,7 +1084,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B82E817274D09910068F508 /* Build configuration list for PBXNativeTarget "VenueApiEndtoEndTests" */ = {
+		5B82E817274D09910068F508 /* Build configuration list for PBXNativeTarget "CamlistEndtoEndTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B82E818274D09910068F508 /* Debug */,

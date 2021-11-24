@@ -10,7 +10,7 @@ import CoreLocation
 
 final class VenueViewModel{
     typealias Observer<T> = (T) -> Void
-    let useCase: FetchVenueUseCase
+    let useCase: FetchVenueUseCase?
     
     var onVenueUpdated: Observer<[Venue]>?
     var onVenueLoadedWithError: Observer<Error>?
@@ -21,18 +21,20 @@ final class VenueViewModel{
     }
     
     func loadVenues(){
+ 
         onVenueLoading?(true)
-        useCase.execute() { [weak self] result in
-            guard let self = self else{ return }
+        useCase?.execute() {[weak self]  result in
             switch result{
             case let .success(venue):
-                self.onVenueUpdated?(venue)
+                self?.onVenueUpdated?(venue)
             case let .failure(error):
-                self.onVenueLoadedWithError?(error)
+                self?.onVenueLoadedWithError?(error)
             }
-            self.onVenueLoading?(false)
+            self?.onVenueLoading?(false)
         }
     }
+    
+  
     
 }
 

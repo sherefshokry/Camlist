@@ -24,9 +24,9 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
     var venueUpdateController: VenueUpdateViewController?
     var venueItems: [VenueCellController] = [] {
         didSet{
-            DispatchQueue.main.async{ [weak self] in
-                self?.tableView.reloadData()
-            }
+           DispatchQueue.main.async{ [weak self] in
+               self?.tableView.reloadData()
+           }
         }
     }
 

@@ -33,6 +33,7 @@ class Constants {
     
     struct CustomNotification{
         static var UPDATE_LOCATION_NOTIFICATION = "UPDATE_LOCATION_NOTIFICATION"
+        static var UPDATE_VENUE_ID = "UPDATE_VENUE_ID"
     }
     
 }

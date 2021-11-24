@@ -31,9 +31,11 @@ internal final class VenueImageMapper{
     
     internal static func map(_ data: Data,_ response: HTTPURLResponse) -> Result<VenueImage, Error> {
         guard response.statusCode == OK_200 ,  let root = try? JSONDecoder().decode([VenueImageItem].self, from: data) else {
+            
             return .failure(NetworkError.invalidData)
         }
         let venueImages = root.map{ $0.item }
+        
         return venueImages.isEmpty ? .failure(NetworkError.invalidData) : .success(venueImages[0])
     }
     

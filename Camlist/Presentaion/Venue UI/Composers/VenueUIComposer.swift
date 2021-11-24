@@ -10,9 +10,10 @@ import Foundation
 final class VenueUIComposer{
     private init() {}
     
-    public static func venueComposedWith(fetchVenueUseCase: FetchVenueUseCase,fetchVenueImageUseCase: FetchVenueImageUseCase) -> VenueViewController {
+    public static func venueComposedWith(fetchVenueUseCase: FetchVenueUseCase,fetchVenueImageUseCase: FetchVenueImageUseCase,locationManager: LocationManagerService = LocationManager.shared) -> VenueViewController {
+        
         let viewModel = VenueViewModel(useCase: fetchVenueUseCase)
-        let venueUpdateViewController = VenueUpdateViewController(viewModel: viewModel)
+        let venueUpdateViewController = VenueUpdateViewController(viewModel: viewModel,locationManager: locationManager)
         let venueController = VenueViewController.instantiateViewController()
         venueController.venueUpdateController = venueUpdateViewController
         
@@ -21,8 +22,8 @@ final class VenueUIComposer{
             venueController?.showMessage(alertMessage)
         }
         
-        venueController.reloadVenueList = {
-            venueController.hideErrorView()
+        venueController.reloadVenueList = { [weak venueController] in
+            venueController?.hideErrorView()
             venueUpdateViewController.loadVenueData()
         }
         
@@ -43,6 +44,7 @@ final class VenueUIComposer{
 
     private static func adaptVenueToCellController(forwardingTo controller: VenueViewController,imageLoaderUseCase: FetchVenueImageUseCase) -> (([Venue]) -> Void) {
         controller.venueItems = []
+        
         return {[weak controller] venueItems in
             controller?.venueItems = venueItems.map {
                 let viewModel = VenueCellViewModel(model: $0, useCase: imageLoaderUseCase)
@@ -51,6 +53,8 @@ final class VenueUIComposer{
         }
     }
     
+    
+   
 }
 
 

@@ -7,12 +7,12 @@
 
 import Foundation
 
-public struct VenueImage{
-    let id: String
-    let prefix: String
-    let suffix: String
-    let width:  Int
-    let height: Int
+public struct VenueImage: Equatable{
+    public let id: String
+    public let prefix: String
+    public let suffix: String
+    public let width:  Int
+    public let height: Int
     
     public init(id: String, prefix: String, suffix: String, width: Int, height: Int) {
         self.id = id

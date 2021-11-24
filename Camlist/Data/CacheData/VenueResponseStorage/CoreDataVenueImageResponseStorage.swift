@@ -33,7 +33,9 @@ final class CoreDataVenueImageResponseStorage {
         
         do {
             if let result = try context.fetch(request).first {
-                context.delete(result.venueImage ?? VenueImageEntity())
+                if let venueImage = result.venueImage {
+                    context.delete(venueImage)
+                }
             }
         } catch {
             print(error)

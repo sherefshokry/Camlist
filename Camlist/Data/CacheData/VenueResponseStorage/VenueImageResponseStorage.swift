@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol VenueImageResponseStorage {
+public protocol VenueImageResponseStorage {
     func getResponse(with venueId: String,completion: @escaping (Result<VenueImage?, CoreDataStorageError>) -> Void)
     func saveResponse(with venueImage: VenueImage,for venueId: String)
 }

@@ -10,9 +10,9 @@ import Foundation
 class VenueCellViewModel{
     typealias Observer<T> = (T) -> Void
     
-    private var task: HTTPClientTask?
-    private var model: Venue
-    private var useCase: FetchVenueImageUseCase
+    public var task: HTTPClientTask?
+    public var model: Venue
+    public var useCase: FetchVenueImageUseCase
     
     internal init(model: Venue, useCase: FetchVenueImageUseCase) {
         self.model = model
@@ -33,8 +33,10 @@ class VenueCellViewModel{
     
     
     func loadImageData(){
-        //task =
-        useCase.execute(venueId: model.id, cached: {[weak self] cachedImage in
+
+        NotificationCenter.default.post(name: Notification.Name(Constants.CustomNotification.UPDATE_VENUE_ID), object: nil, userInfo: ["venueID" : model.id])
+        
+        useCase.execute(cached: {[weak self] cachedImage in
             let cachedImageURL = self?.prepareImageUrl(with: cachedImage)
             
             self?.onImageLoad?(cachedImageURL!)

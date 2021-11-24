@@ -10,33 +10,33 @@ import Foundation
 
 public final class RemoteVenueImageLoader: VenueImageRepository{
    
-    private let client : HTTPClient
-    private let venueResponseStorage: VenueImageResponseStorage
+    public let client : HTTPClient
+    public let venueResponseStorage: VenueImageResponseStorage?
+    var urlRequest: URLRequest
+    var venueId: String
     
-    init(client : HTTPClient,venueResponseStorage: VenueImageResponseStorage){
+    public init(client : HTTPClient,venueResponseStorage: VenueImageResponseStorage?,urlRequest: URLRequest,venueId: String){
         self.client = client
         self.venueResponseStorage = venueResponseStorage
+        self.urlRequest = urlRequest
+        self.venueId = venueId
     }
     
-    func fetchVenueImage(venueId: String, cached: @escaping (VenueImage) -> Void, completion: @escaping (Result<VenueImage, Error>) -> Void)  {
-//        -> HTTPClientTask?
-        let urlRequest = APIEndPoints.getVenueImageURLRequest(venueID: venueId)
-        var task: HTTPClientTask?
-        
-        venueResponseStorage.getResponse(with: venueId) {[weak self] cachedResult in
+    public func fetchVenueImage(cached: @escaping (VenueImage) -> Void, completion: @escaping (Result<VenueImage, Error>) -> Void)  {
+    
+        venueResponseStorage?.getResponse(with: venueId) {[weak self] cachedResult in
             if case let .success(cachedImage) =  cachedResult{
                 cached(cachedImage!)
             }
-            
-            //task =
-            self?.client.get(from: urlRequest) {[weak self] result in
+        
+            self?.client.get(from: self!.urlRequest) {[weak self] result in
                 guard self != nil else { return }
                 switch result {
                 case let .success((data,response)):
                     let mappedResponseData = VenueImageMapper.map(data,response)
                     if case let .success(venueImage) = mappedResponseData {
                         
-                        self?.venueResponseStorage.saveResponse(with: venueImage, for: venueId)
+                        self?.venueResponseStorage?.saveResponse(with: venueImage, for: self?.venueId ?? "")
                     }
                     completion(mappedResponseData)
                 case .failure:
@@ -45,7 +45,7 @@ public final class RemoteVenueImageLoader: VenueImageRepository{
             }
            
         }
-       // return task
+        
     }
     
 }
