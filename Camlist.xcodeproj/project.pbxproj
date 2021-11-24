@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BABCFBD9B91B999F2F161E6 /* Pods_Camlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */; };
 		5B23EF8D2749170000EF3526 /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */; };
 		5B586314274D76A400085DA8 /* VenueViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B586313274D76A400085DA8 /* VenueViewControllerTests.swift */; };
 		5B586318274D897900085DA8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B586317274D897900085DA8 /* main.swift */; };
@@ -57,7 +56,8 @@
 		5BE73E332746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */; };
 		5BE73E382746E1F700EEA7B3 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE73E372746E1F600EEA7B3 /* VenueCell.swift */; };
 		5BFD7C942749929C0042A36A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD7C932749929C0042A36A /* LocationManager.swift */; };
-		A7CE9B6970FE05F5B6FCC6B7 /* Pods_CamlistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */; };
+		6EE84D50B0423F1A38711FA9 /* Pods_CamlistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDCCEA839647939A247C14 /* Pods_CamlistTests.framework */; };
+		E8313437FD85FAC76E85C142 /* Pods_Camlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C120E61981C63F07DD6AC2 /* Pods_Camlist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.release.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.release.xcconfig"; sourceTree = "<group>"; };
-		495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.debug.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.debug.xcconfig"; sourceTree = "<group>"; };
+		1FA21C750983360A3C8CC506 /* Pods-Camlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.release.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.release.xcconfig"; sourceTree = "<group>"; };
+		238F300ADF65C400F38CE49D /* Pods-Camlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.debug.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.debug.xcconfig"; sourceTree = "<group>"; };
+		4E0B551600B59E1B8FFD4E71 /* Pods-CamlistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.release.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B23EF8C2749170000EF3526 /* VenueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
 		5B586313274D76A400085DA8 /* VenueViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewControllerTests.swift; sourceTree = "<group>"; };
 		5B586317274D897900085DA8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -132,13 +133,9 @@
 		5BE73E322746B64700EEA7B3 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		5BE73E372746E1F600EEA7B3 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		5BFD7C932749929C0042A36A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		9F0D2295EBADE3F9E45CAA97 /* Pods_Camlist_CamlistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist_CamlistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB3B532D114C2E9163E4E3B0 /* Pods-Camlist-CamlistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist-CamlistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Camlist-CamlistUITests/Pods-Camlist-CamlistUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamlistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCB483AAD8808528CBF2CD7D /* Pods-CamlistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.release.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.release.xcconfig"; sourceTree = "<group>"; };
-		F8F3B8B3DA266B7456DD1681 /* Pods-Camlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camlist.release.xcconfig"; path = "Target Support Files/Pods-Camlist/Pods-Camlist.release.xcconfig"; sourceTree = "<group>"; };
-		F92798D10A33BF32AB37CA99 /* Pods-CamlistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.debug.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61DDCCEA839647939A247C14 /* Pods_CamlistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamlistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		633084E657381761E8B6ADE3 /* Pods-CamlistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamlistTests.debug.xcconfig"; path = "Target Support Files/Pods-CamlistTests/Pods-CamlistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5C120E61981C63F07DD6AC2 /* Pods_Camlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BABCFBD9B91B999F2F161E6 /* Pods_Camlist.framework in Frameworks */,
+				E8313437FD85FAC76E85C142 /* Pods_Camlist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7CE9B6970FE05F5B6FCC6B7 /* Pods_CamlistTests.framework in Frameworks */,
+				6EE84D50B0423F1A38711FA9 /* Pods_CamlistTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,12 +168,10 @@
 		4E8A048D4D55FDCDCDFEDDA9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */,
-				F8F3B8B3DA266B7456DD1681 /* Pods-Camlist.release.xcconfig */,
-				CB3B532D114C2E9163E4E3B0 /* Pods-Camlist-CamlistUITests.debug.xcconfig */,
-				1EE4CA58CBBAFF8B56F7735E /* Pods-Camlist-CamlistUITests.release.xcconfig */,
-				F92798D10A33BF32AB37CA99 /* Pods-CamlistTests.debug.xcconfig */,
-				DCB483AAD8808528CBF2CD7D /* Pods-CamlistTests.release.xcconfig */,
+				238F300ADF65C400F38CE49D /* Pods-Camlist.debug.xcconfig */,
+				1FA21C750983360A3C8CC506 /* Pods-Camlist.release.xcconfig */,
+				633084E657381761E8B6ADE3 /* Pods-CamlistTests.debug.xcconfig */,
+				4E0B551600B59E1B8FFD4E71 /* Pods-CamlistTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -281,7 +276,7 @@
 				5B82E812274D09910068F508 /* CamlistEndtoEndTests */,
 				5BE73DD42746763900EEA7B3 /* Products */,
 				4E8A048D4D55FDCDCDFEDDA9 /* Pods */,
-				F6C57E6FFBF27C9F1F15A7EF /* Frameworks */,
+				DC781C5F1FC9A03147526D29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -489,12 +484,11 @@
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
-		F6C57E6FFBF27C9F1F15A7EF /* Frameworks */ = {
+		DC781C5F1FC9A03147526D29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A4E6095E297AC8795703A6C5 /* Pods_Camlist.framework */,
-				9F0D2295EBADE3F9E45CAA97 /* Pods_Camlist_CamlistUITests.framework */,
-				D133FA7D768395353E72F47B /* Pods_CamlistTests.framework */,
+				A5C120E61981C63F07DD6AC2 /* Pods_Camlist.framework */,
+				61DDCCEA839647939A247C14 /* Pods_CamlistTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -524,11 +518,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE73DFD2746764100EEA7B3 /* Build configuration list for PBXNativeTarget "Camlist" */;
 			buildPhases = (
-				EE550A154ACEC1CB0F166100 /* [CP] Check Pods Manifest.lock */,
+				24E5BC4E6546B766CE50D79B /* [CP] Check Pods Manifest.lock */,
 				5BE73DCF2746763900EEA7B3 /* Sources */,
 				5BE73DD02746763900EEA7B3 /* Frameworks */,
 				5BE73DD12746763900EEA7B3 /* Resources */,
-				862DD6BD0E954A4AA9599CD7 /* [CP] Embed Pods Frameworks */,
+				55922463265F6BD09982D4AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -543,7 +537,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE73E002746764100EEA7B3 /* Build configuration list for PBXNativeTarget "CamlistTests" */;
 			buildPhases = (
-				BF8A837E2F54B325CA800342 /* [CP] Check Pods Manifest.lock */,
+				27144B860E5D7FFD248C6B6E /* [CP] Check Pods Manifest.lock */,
 				5BE73DE52746764000EEA7B3 /* Sources */,
 				5BE73DE62746764000EEA7B3 /* Frameworks */,
 				5BE73DE72746764000EEA7B3 /* Resources */,
@@ -630,24 +624,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		862DD6BD0E954A4AA9599CD7 /* [CP] Embed Pods Frameworks */ = {
+		24E5BC4E6546B766CE50D79B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Camlist-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF8A837E2F54B325CA800342 /* [CP] Check Pods Manifest.lock */ = {
+		27144B860E5D7FFD248C6B6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -669,26 +668,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE550A154ACEC1CB0F166100 /* [CP] Check Pods Manifest.lock */ = {
+		55922463265F6BD09982D4AE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Camlist-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camlist/Pods-Camlist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -887,7 +881,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -942,7 +936,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -954,7 +948,7 @@
 		};
 		5BE73DFE2746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 495EE1DBE7C9FFDDF2AFB0BA /* Pods-Camlist.debug.xcconfig */;
+			baseConfigurationReference = 238F300ADF65C400F38CE49D /* Pods-Camlist.debug.xcconfig */;
 			buildSettings = {
 				API_BASE_URL = "https://api.foursquare.com/v3/places";
 				API_KEY = "fsq3i7zLlSfxIcEDGcdVZovKT9XZpi3wZGmDCSSD30p/lkA=";
@@ -975,7 +969,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -991,7 +985,7 @@
 		};
 		5BE73DFF2746764100EEA7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8F3B8B3DA266B7456DD1681 /* Pods-Camlist.release.xcconfig */;
+			baseConfigurationReference = 1FA21C750983360A3C8CC506 /* Pods-Camlist.release.xcconfig */;
 			buildSettings = {
 				API_BASE_URL = "https://api.foursquare.com/v3/places";
 				API_KEY = "fsq3i7zLlSfxIcEDGcdVZovKT9XZpi3wZGmDCSSD30p/lkA=";
@@ -1012,7 +1006,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1028,7 +1022,7 @@
 		};
 		5BE73E012746764100EEA7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F92798D10A33BF32AB37CA99 /* Pods-CamlistTests.debug.xcconfig */;
+			baseConfigurationReference = 633084E657381761E8B6ADE3 /* Pods-CamlistTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1056,7 +1050,7 @@
 		};
 		5BE73E022746764100EEA7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCB483AAD8808528CBF2CD7D /* Pods-CamlistTests.release.xcconfig */;
+			baseConfigurationReference = 4E0B551600B59E1B8FFD4E71 /* Pods-CamlistTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -14,7 +14,5 @@ public protocol HTTPClientTask {
 public protocol HTTPClient {
     typealias Result = Swift.Result<(Data, HTTPURLResponse), Error>
     
-    @discardableResult
     func get(from request: URLRequest,completion: @escaping (Result) -> ())
-    //-> HTTPClientTask
 }
