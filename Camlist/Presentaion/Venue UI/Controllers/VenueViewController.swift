@@ -21,7 +21,7 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
     
     var reloadVenueList: (() -> Void)?
     
-    var venueUpdateController: VenueUpdateViewController?
+    weak var venueUpdateController: VenueUpdateViewController?
     var venueItems: [VenueCellController] = [] {
         didSet{
            DispatchQueue.main.async{ [weak self] in
@@ -69,6 +69,7 @@ final class VenueViewController: UIViewController , StoryboardInstantiable {
             self?.errorDataView.isHidden = true
         }
     }
+    
 }
 
 extension VenueViewController: UITableViewDataSource,UITableViewDelegate {
@@ -106,6 +107,6 @@ extension VenueViewController: UITableViewDataSource,UITableViewDelegate {
 //        }
 //    }
     
-    
+  
     
 }

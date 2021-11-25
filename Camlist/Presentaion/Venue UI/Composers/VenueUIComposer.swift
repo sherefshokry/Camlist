@@ -10,9 +10,9 @@ import Foundation
 final class VenueUIComposer{
     private init() {}
     
-    public static func venueComposedWith(fetchVenueUseCase: FetchVenueUseCase,fetchVenueImageUseCase: FetchVenueImageUseCase,locationManager: LocationManagerService = LocationManager.shared) -> VenueViewController {
+    public static func venueComposedWith(fetchVenueUseCase: FetchVenueUseCase?,fetchVenueImageUseCase: FetchVenueImageUseCase?,locationManager: LocationManagerService = LocationManager.shared) -> VenueViewController {
         
-        let viewModel = VenueViewModel(useCase: fetchVenueUseCase)
+        let viewModel = VenueViewModel(useCase: fetchVenueUseCase!)
         let venueUpdateViewController = VenueUpdateViewController(viewModel: viewModel,locationManager: locationManager)
         let venueController = VenueViewController.instantiateViewController()
         venueController.venueUpdateController = venueUpdateViewController
@@ -36,7 +36,7 @@ final class VenueUIComposer{
             }
         }
         
-        viewModel.onVenueUpdated = adaptVenueToCellController(forwardingTo: venueController, imageLoaderUseCase: fetchVenueImageUseCase)
+        viewModel.onVenueUpdated = adaptVenueToCellController(forwardingTo: venueController, imageLoaderUseCase: fetchVenueImageUseCase!)
         
         return venueController
     }
@@ -52,7 +52,6 @@ final class VenueUIComposer{
             }
         }
     }
-    
     
    
 }

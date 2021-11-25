@@ -28,6 +28,7 @@ class VenueUpdateViewController {
     }
     
     func loadVenueData(){
+        
         locationManager.getLocation {[weak self] (location:CLLocation?, error:NSError?) in
             if let error = error {
                 print(error)
@@ -61,6 +62,7 @@ class VenueUpdateViewController {
             
         }
     }
+    
     
     
 }

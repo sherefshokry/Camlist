@@ -13,29 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    var mainAppController: MainAppController?
     
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navigationController = UINavigationController()
+        mainAppController = MainAppController()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+
+        
         navigationController.pushViewController(makeRootViewController(), animated: false)
         
         return true
     }
 
     func makeRootViewController() -> VenueViewController {
-        MainAppController().makeVenueScene()
+        (mainAppController?.makeVenueScene())!
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         CoreDataStorage.shared.saveContext()
     }
-    
-    
-    
-  
     
 
 }

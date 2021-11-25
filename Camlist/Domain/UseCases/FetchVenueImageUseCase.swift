@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FetchVenueImageUseCase {
+protocol FetchVenueImageUseCase: AnyObject{
     func execute(cached: @escaping (VenueImage) -> Void, completion: @escaping (Result<VenueImage,Error>) -> Void)
 }
 

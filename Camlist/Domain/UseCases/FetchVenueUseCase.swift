@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FetchVenueUseCase {
+protocol FetchVenueUseCase: AnyObject {
     func execute(completion: @escaping (Result<[Venue],Error>) -> Void)
 }
 
@@ -17,6 +17,7 @@ final class DefaultFetchVenueUseCase: FetchVenueUseCase {
     let venueRepository: VenueRepository
     
     init(venueRepository: VenueRepository){
+        
         self.venueRepository =  venueRepository
     }
     
@@ -26,7 +27,6 @@ final class DefaultFetchVenueUseCase: FetchVenueUseCase {
         }
 
     }
-    
     
 }
 

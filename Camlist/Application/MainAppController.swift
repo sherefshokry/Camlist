@@ -10,6 +10,9 @@ import Foundation
 
 final class MainAppController{
     
+    var fetchVenueUseCase: FetchVenueUseCase?
+    var fetchVenueImageUseCase: FetchVenueImageUseCase?
+    
     // MARK: - App DIContainer
     func makeVenueScene() -> VenueViewController {
         let client = URLSessionHTTPClient()
@@ -30,7 +33,7 @@ final class MainAppController{
         
         let localVenueLoader = LocalVenueLoader(venueResponseStorage: venueResponseStorage)
         let venueRepo = VenueRepoWithFallBack(primary: remoteVenueLoader, fallback: localVenueLoader)
-        let fetchVenueUseCase = DefaultFetchVenueUseCase(venueRepository: venueRepo)
+        fetchVenueUseCase = DefaultFetchVenueUseCase(venueRepository: venueRepo)
         let venueImageResponseStorage = CoreDataVenueImageResponseStorage()
         let imageUrlRequest = APIEndPoints.getVenueImageURLRequest(venueID: "-1")
         let venueImageRepo = RemoteVenueImageLoader(client: client, venueResponseStorage: venueImageResponseStorage, urlRequest: imageUrlRequest,venueId: "-1")
@@ -44,7 +47,7 @@ final class MainAppController{
             }
         }
     
-        let fetchVenueImageUseCase = DefaultFetchVenueImageUseCase(venueRepository: venueImageRepo)
+        fetchVenueImageUseCase = DefaultFetchVenueImageUseCase(venueRepository: venueImageRepo)
         return VenueUIComposer.venueComposedWith(fetchVenueUseCase: fetchVenueUseCase, fetchVenueImageUseCase: fetchVenueImageUseCase)
     }
 
@@ -53,6 +56,5 @@ final class MainAppController{
         return UserLocation(lat: 30.0511, lng: 31.2126)
     }
     
-    
-    
+
 }

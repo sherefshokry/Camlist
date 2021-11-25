@@ -40,7 +40,7 @@ class VenueViewControllerTests: XCTestCase {
         let locationManagerService = LocationManagerServiceMock()
         let sut = VenueUIComposer.venueComposedWith(fetchVenueUseCase: fetchVenueUseCase, fetchVenueImageUseCase: fetchVenueImageUseCase,locationManager: locationManagerService)
         trackForMemoryLeaks(sut, file, line)
-       // trackForMemoryLeaks(fetchVenueUseCase, file, line)
+        trackForMemoryLeaks(fetchVenueUseCase, file, line)
         return (sut,fetchVenueUseCase)
     }
     
